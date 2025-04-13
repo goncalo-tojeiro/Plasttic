@@ -156,7 +156,7 @@
     "rehype-remove-comments": "^6.0.0",
     "socket.io": "^4.7.5",
     "stylelint": "^16.6.1",
-    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-recommended": "^16.0.0",
     "stylelint-order": "^6.0.4",
     "ts-jest": "^29.1.4",
     "ts-node": "^10.9.2",
