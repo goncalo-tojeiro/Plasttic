@@ -9,4 +9,4 @@ updates:
       timezone: 'Europe/Lisbon'
       day: 'sunday'
       time: '23:00'
-    pull-request-branch-name: 'dependabot(workflow-actions): {package-name}-{version}'
+    labels: 'main/actions', 'dependencies'
