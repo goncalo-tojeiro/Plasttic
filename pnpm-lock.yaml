@@ -21,8 +21,8 @@ importers:
         specifier: ^0.10.3
         version: 0.10.3
       '@csstools/postcss-global-data':
-        specifier: ^2.1.1
-        version: 2.1.1(postcss@8.5.6)
+        specifier: ^3.1.0
+        version: 3.1.0(postcss@8.5.6)
       '@csstools/postcss-progressive-custom-properties':
         specifier: ^3.3.0
         version: 3.3.0(postcss@8.5.6)
@@ -1103,9 +1103,9 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@csstools/postcss-global-data@2.1.1':
-    resolution: {integrity: sha512-tihdBLogY2G5jgUSu2jKSEVeOcnWqsz6k7UmPM7+ezhuV9FP5MIyX35Hc/YvqipQLRNsfBj9wRkBvsE7k1GM8A==}
-    engines: {node: ^14 || ^16 || >=18}
+  '@csstools/postcss-global-data@3.1.0':
+    resolution: {integrity: sha512-qfS0bUxBukuyxEyxTTZG+px2xwAQPf7Qk6B7lFdjWnovb/O6h0t3sxrVY81nJLh7z0KvEMhjxTURNtEmOrADpQ==}
+    engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
 
@@ -6871,7 +6871,7 @@ packages:
   puppeteer@22.10.0:
     resolution: {integrity: sha512-ZOkZd6a6t0BdKcWb0wAYHWQqCfdlN1PPnXOmg/XNrbo6gJhYWFX4qCNb6ahSn8TpAqBqLCoD4Q010F7GwOM7mA==}
     engines: {node: '>=18'}
-    deprecated: < 24.10.2 is no longer supported
+    deprecated: < 24.15.0 is no longer supported
     hasBin: true
 
   pure-rand@6.1.0:
@@ -9426,7 +9426,7 @@ snapshots:
       '@csstools/css-tokenizer': 2.4.1
       postcss: 8.5.6
 
-  '@csstools/postcss-global-data@2.1.1(postcss@8.5.6)':
+  '@csstools/postcss-global-data@3.1.0(postcss@8.5.6)':
     dependencies:
       postcss: 8.5.6
 
