@@ -157,7 +157,7 @@
     "socket.io": "^4.8.1",
     "stylelint": "^16.24.0",
     "stylelint-config-recommended": "^14.0.1",
-    "stylelint-order": "^6.0.4",
+    "stylelint-order": "^7.0.0",
     "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
     "typescript": "5.9.2",
