@@ -72,8 +72,8 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1
       cpx2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.0
+        version: 8.0.0
       cssnano:
         specifier: ^7.1.1
         version: 7.1.1(postcss@8.5.6)
@@ -3685,9 +3685,9 @@ packages:
       typescript:
         optional: true
 
-  cpx2@7.0.2:
-    resolution: {integrity: sha512-r9+RNpjAJO+n+YhlnU5SdpYX+PRAlA+uJSV/iEhE4rwKal6UA+7MAs9WiICNtF/qrgcsVBAXffJ6B2+BGwNvcA==}
-    engines: {node: '>=18', npm: '>=10'}
+  cpx2@8.0.0:
+    resolution: {integrity: sha512-RxD9jrSVNSOmfcbiPlr3XnKbUKH9K1w2HCv0skczUKhsZTueiDBecxuaSAKQkYSLQaGVA4ZQJZlTj5hVNNEvKg==}
+    engines: {node: ^20.0.0 || >=22.0.0, npm: '>=10'}
     hasBin: true
 
   create-jest@29.7.0:
@@ -4997,6 +4997,10 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
+  ignore@6.0.2:
+    resolution: {integrity: sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==}
+    engines: {node: '>= 4'}
+
   ignore@7.0.5:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
@@ -6195,9 +6199,9 @@ packages:
     resolution: {integrity: sha512-VFqfGDHlx87K66yZrNdI4YGtD70IRyd+zSvgks6mzHPRNkoKy+9EKP4SFC77/vTTQYmRmti7dvqC+m5jBrBAcg==}
     engines: {node: '>=12'}
 
-  p-map@6.0.0:
-    resolution: {integrity: sha512-T8BatKGY+k5rU+Q/GTYgrEf2r4xRMevAN5mtXc2aPc4rS1j3s+vWTaO2Wag94neXuCAUAs8cxBL9EeB5EA6diw==}
-    engines: {node: '>=16'}
+  p-map@7.0.3:
+    resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
+    engines: {node: '>=18'}
 
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
@@ -12674,7 +12678,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
 
-  cpx2@7.0.2:
+  cpx2@8.0.0:
     dependencies:
       debounce: 2.1.0
       debug: 4.4.3
@@ -12682,9 +12686,9 @@ snapshots:
       fs-extra: 11.3.2
       glob: 11.0.3
       glob2base: 0.0.12
-      ignore: 5.3.2
+      ignore: 6.0.2
       minimatch: 10.0.3
-      p-map: 6.0.0
+      p-map: 7.0.3
       resolve: 1.22.8
       safe-buffer: 5.2.1
       shell-quote: 1.8.3
@@ -14279,6 +14283,8 @@ snapshots:
 
   ignore@5.3.2: {}
 
+  ignore@6.0.2: {}
+
   ignore@7.0.5: {}
 
   image-ssim@0.2.0: {}
@@ -15670,7 +15676,7 @@ snapshots:
     dependencies:
       aggregate-error: 4.0.1
 
-  p-map@6.0.0: {}
+  p-map@7.0.3: {}
 
   p-try@2.2.0: {}
 
