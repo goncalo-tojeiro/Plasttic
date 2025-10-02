@@ -41,13 +41,13 @@ jobs:
           node-version: 20
 
       # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Provides functionality for GitHub Actions
       - name: ci
         uses: pnpm/action-setup@v4
         with:
-          version: 8.15.9
+          version: 10.17.1
 
       # Installs dependencies
       - run: pnpm install
