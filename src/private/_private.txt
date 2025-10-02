@@ -1,1 +1,0 @@
-Utility folder for files not to be accessed by visitors
