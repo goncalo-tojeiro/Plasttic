@@ -24,8 +24,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(postcss@8.5.6)
       '@csstools/postcss-progressive-custom-properties':
-        specifier: ^3.3.0
-        version: 3.3.0(postcss@8.5.6)
+        specifier: ^4.2.1
+        version: 4.2.1(postcss@8.5.6)
       '@fullhuman/postcss-purgecss':
         specifier: ^6.0.0
         version: 6.0.0(postcss@8.5.6)
@@ -1208,6 +1208,12 @@ packages:
   '@csstools/postcss-progressive-custom-properties@3.3.0':
     resolution: {integrity: sha512-W2oV01phnILaRGYPmGFlL2MT/OgYjQDrL9sFlbdikMFi6oQkFki9B86XqEWR7HCsTZFVq7dbzr/o71B75TKkGg==}
     engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+
+  '@csstools/postcss-progressive-custom-properties@4.2.1':
+    resolution: {integrity: sha512-uPiiXf7IEKtUQXsxu6uWtOlRMXd2QWWy5fhxHDnPdXKCQckPP3E34ZgDoZ62r2iT+UOgWsSbM4NvHE5m3mAEdw==}
+    engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
 
@@ -9543,6 +9549,11 @@ snapshots:
       postcss: 8.5.6
 
   '@csstools/postcss-progressive-custom-properties@3.3.0(postcss@8.5.6)':
+    dependencies:
+      postcss: 8.5.6
+      postcss-value-parser: 4.2.0
+
+  '@csstools/postcss-progressive-custom-properties@4.2.1(postcss@8.5.6)':
     dependencies:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
