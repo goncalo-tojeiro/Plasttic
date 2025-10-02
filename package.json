@@ -144,7 +144,7 @@
     "postcss-nesting": "^13.0.2",
     "postcss-preset-env": "^10.4.0",
     "postcss-simple-vars": "^7.0.1",
-    "postcss-sorting": "^8.0.2",
+    "postcss-sorting": "^9.1.0",
     "prettier": "^3.6.2",
     "prettier-eslint": "^16.4.2",
     "rehype": "^13.0.2",
