@@ -9,4 +9,4 @@ updates:
       timezone: 'Europe/Lisbon'
       day: 'sunday'
       time: '23:00'
-    labels: 'main/actions', 'dependencies'
+    labels: 'main/actions' 'dependencies'
