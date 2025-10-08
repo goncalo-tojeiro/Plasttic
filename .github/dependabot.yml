@@ -9,5 +9,7 @@ updates:
       timezone: 'Europe/Lisbon'
       day: 'sunday'
       time: '23:00'
-    pull-request-branch-prefix:
-      branch-prefix: 'main(workflow-actions)'
+    labels: 
+      - 'main' 
+      - 'actions' 
+      - 'dependabot'
