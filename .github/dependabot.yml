@@ -9,4 +9,7 @@ updates:
       timezone: 'Europe/Lisbon'
       day: 'sunday'
       time: '23:00'
-    labels: 'main, actions, dependabot'
+    labels: 
+      - 'main' 
+      - 'actions' 
+      - 'dependabot'
