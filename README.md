@@ -130,8 +130,8 @@ _(Note: The files installed are not empty. The reason is that, by creating a tem
 
 ---
 
-- Step 1: Run `mkdir certs`
-- Step 2: Run `cd certs`
+- Step 1: Run `mkdir .certs`
+- Step 2: Run `cd .certs`
 - Step 3: Install certificate with [mkcert](https://mkcert.dev/)
 - Step 4: Check certificate filenames and/or path in the file `browser-sync.cjs`
 - Step 5: Run `npm run dev:ssl` to start the dev server on `https://localhost:8000`

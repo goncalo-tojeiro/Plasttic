@@ -1,0 +1,396 @@
+<!doctype html>
+<!-- Plasttic v2.3 | MIT License | https://plasttic.dev/ -->
+<!-- 
+TODO: language
+https://www.w3schools.com/tags/ref_language_codes.asp 
+-->
+<html lang="en">
+  <head>
+    <!-- Partytown https://partytown.builder.io/common-services -->
+    <script>
+      window.partytown = {
+        forward: ["dataLayer.push"], // Google Tag Manager
+      };
+    </script>
+    <script src="/~partytown/partytown.js"></script>
+
+    <!-- TODO: Google Tag Manager/Google Analytics -->
+    <!--? if Google Tag Manager is configures for Google Analytics you just need the first one -->
+    <!--? Google Tag Manager: replace GTM-TRACK-ID with your TAG MANAGER ID. -->
+    <!--
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TRACK-ID');
+    </script>
+    -->
+    <!-- Google Analytics: replace G-TRACK-ID with your ANALYTICS MEASUREMENT ID. -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
+    <!-- Google Analytics: replace G-TRACK-ID with your ANALYTICS MEASUREMENT ID. -->
+    <!--
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-TRACK-ID"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TRACK-ID');
+    </script>
+    -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- TODO: Page title (max: 70 characters) -->
+    <title>
+      Plasttic | Plasttic is a HTML Boilerplate, Atomic Design CSS Framework and
+      Best Practices Template
+    </title>
+
+    <meta
+      name="robots"
+      content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    />
+
+    <!-- TODO: Website description  -->
+    <meta
+      name="description"
+      content="Plasttic is a HTML Boilerplate, Atomic Design CSS Framework and Best Practices Template."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- TODO: Page URL -->
+    <link
+      rel="canonical"
+      href="https://boilerplate.plasttic.dev/homepage.html"
+    />
+
+    <!-- TODO: Open Graph -->
+    <!--   
+    Personalize by Page
+    https://ogp.me 
+    https://developers.facebook.com/tools/debug/ 
+    -->
+    <meta property="og:title" content="Plasttic: Web Boilerplate" />
+    <meta
+      property="og:description"
+      content="Plasttic is a HTML Boilerplate, Atomic Design CSS Framework and Best Practices Template."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Plasttic" />
+    <meta property="og:url" content="https://boilerplate.plasttic.dev/" />
+    <meta
+      name="og:image"
+      content="https://boilerplate.plasttic.dev/social-banner-1200_630.png"
+    />
+    <meta name="og:image:alt" content="Plasttic logo banner" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- TODO: Twitter Cards -->
+    <!-- 
+    https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#opengraph
+    Most information is provided by the Open Graph meta tags
+    -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tojeiro_me" />
+
+    <!-- TODO: About the author of the website -->
+    <link rel="author" href="/humans.txt" />
+
+    <!-- TODO: Icons -->
+    <!-- 
+    https://realfavicongenerator.net/
+    -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+
+    <!-- TODO: Web App Manifest -->
+    <!-- 
+    https://developer.mozilla.org/en-US/docs/Web/Manifest
+    -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- TODO: Theme-color -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- TODO: Images (preload visible images on load) -->
+    <link
+      rel="preload"
+      href="/assets/img/illustrations/hero.webp"
+      as="image"
+      fetchpriority="high"
+    />
+
+    <!-- TODO: Fonts -->
+    <!-- 1. Self hosted (preload for @font-face) -->
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-latin-300-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/roboto-latin-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- 2. Google Fonts -->
+    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    -->
+
+    <!-- TODO: Preconnect to CDNs: JS, CSS, Media, ... -->
+    <!--
+    <link rel="preconnect" href="https://unpkg.com/" crossorigin />
+    <link rel="dns-prefetch" href="https://unpkg.com/" />
+    -->
+
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="/assets/css/print.min.css" media="print" />
+
+    <!-- TODO: JS async/defer -->
+    <!--
+    All the javascript files will be concatenated and minified into scripts.min.js.
+    The files inside the "vendor" folder remain untouched. 
+    -->
+    <script src="/assets/js/scripts.min.js" type="module"></script>
+  </head>
+  <!------------- TEMPLATE START ------------->
+  <body class="ptt-tpl__homepage ptt-page__home">
+    <!--? Focusable target for Top of Page (optional) -->
+    <a id="top"></a>
+    <!-- Accessibility: skip to main content ID -->
+    <a class="ptt-c-hidden-link ptt-u-print-no" href="#content"
+      >Jump to Content</a
+    >
+    <!-- TODO: Logo for print only (optional) -->
+    <img
+      class="ptt-u-print-only"
+      src="/assets/img/logos/brand/logo-print.svg"
+      alt
+      loading="lazy"
+      style="height: 60px; margin-bottom: 50px; float: none"
+    />
+    <!-- Semantic HTML: nav / header / main / section / article / aside / address / footer -->
+    <div class="ptt-wrapper">
+      <header id="header" class="ptt-header" role="banner">
+        <div class="ptt-container">
+          <nav class="ptt-nav" aria-label="Main">
+            <a href="/templates/" aria-label="Templates Homepage"
+              ><img
+                class="ptt-nav__logo"
+                src="/logo.svg"
+                alt=""
+                role="presentation"
+            /></a>
+            <ul role="list">
+              <li>Menu Item</li>
+              <li>Menu Item</li>
+              <li>Menu Item</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="content" class="ptt-main">
+        <!-- TODO: SPA Article ID based on section content or page title "about, ..." for anchor links target -->
+        <article id="hero" class="ptt-hero">
+          <div class="ptt-container">
+            <h1>Heroes Headline</h1>
+            <p>Copy text.</p>
+            <p>CTA Button</p>
+            <!-- Accessibility: aria-hidden if decorative -->
+            <picture aria-hidden="true">
+              Hero Image
+              <!-- 
+              Accessibility: alt attribute empty and role presentation for decorative images 
+              -->
+              <!-- Performance: preloaded to allow faster presentation -->
+              <img
+                src="#"
+                srcset="
+                  https://placehold.co/400x150/webp    400w,
+                  https://placehold.co/800x300/webp    800w,
+                  https://placehold.co/1200x450/webp  1200w,
+                  https://placehold.co/1600x600/webp  1600w,
+                  https://placehold.co/3200x1200/webp 3200w
+                "
+                sizes="(max-width: 75rem) 100vw, 75rem"
+                role="presentation"
+                alt=""
+                decoding="async"
+              />
+            </picture>
+          </div>
+        </article>
+        <article id="about" class="ptt-about">
+          <div class="ptt-container">
+            <!------------- SECTION HEADER ------------->
+            <header class="ptt-about__header">
+              <h2>Section Title</h2>
+              <p>Summary</p>
+              <!-- NOTE: picture source or img srcset -->
+              <!-- Accessibility: aria-hidden if decorative -->
+              <picture>
+                <!-- 
+                Accessibility: alt attribute empty and role presentation for decorative images 
+                -->
+                <img
+                  src="#"
+                  srcset=""
+                  sizes=""
+                  alt="Image description"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </header>
+            <!------------- SECTION CONTENT ------------->
+            <section class="ptt-about__content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                adipisci id sit consequatur, fugiat dicta architecto
+                perspiciatis delectus assumenda autem error. Debitis vero
+                ducimus, enim culpa aperiam dolore tempore voluptatibus! Minus
+                ut aut unde omnis iste.
+              </p>
+              <!-- Accessibility: aria-hidden if decorative -->
+              <picture>
+                <!-- 
+                Accessibility: alt attribute empty and role presentation for decorative images 
+                -->
+                <img
+                  src="#"
+                  srcset=""
+                  sizes=""
+                  alt="Image description"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <p>
+                Voluptatum, sit illo iusto quisquam pariatur totam, facilis
+                natus et odio soluta sequi numquam asperiores sapiente eum amet
+                tempore dolores sint alias ratione nobis? Dolor aut praesentium
+                ducimus nemo ad dicta id libero qui voluptatibus, laborum
+                officia rem cupiditate aspernatur, voluptates esse laudantium
+                iure dolorum assumenda accusantium, magnam maxime eos?
+              </p>
+              <p>
+                Cupiditate quibusdam ab impedit. Magnam, dignissimos. Rerum
+                architecto sequi, ducimus aliquid natus recusandae magnam
+                voluptatem asperiores nulla blanditiis. Quas, fugiat eligendi,
+                ex placeat possimus facere excepturi minus suscipit sed
+                assumenda nihil. Officiis, temporibus veniam. Iste, a dolorem.
+                Cumque, repudiandae. Velit praesentium molestiae debitis
+                architecto, quo tenetur dolorem? Voluptatum, officia ut?
+                Necessitatibus facilis temporibus esse itaque? Aliquam
+                molestias, error autem ex facilis doloribus optio quae.
+              </p>
+              <a href="#">Read More</a>
+            </section>
+          </div>
+        </article>
+      </main>
+      <footer id="footer" class="ptt-footer">
+        <div class="ptt-container">
+          <section class="ptt-footer__nav">
+            <a href="#" aria-label="Company Name"
+              ><img class="ptt-footer__nav-logo" src="/logo.svg" alt
+            /></a>
+            <div class="ptt-footer__nav-social">
+              <ul role="list">
+                <li>Social Media Links</li>
+              </ul>
+            </div>
+            <nav class="ptt-footer__nav-links" aria-label="Footer">
+              <ul>
+                <li>Navigation</li>
+                <li>
+                  <ul role="list">
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li>Other Links</li>
+                <li>
+                  <ul role="list">
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>
+                    <li>Menu Item</li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <address class="ptt-footer__address">
+              <ul>
+                <li>Street, Apartment</li>
+                <li>Postal Code, City</li>
+                <li>Country</li>
+                <li></li>
+                <li class="ptt-footer__address-email">
+                  <a href="mailto:email@example.com">email@example.com</a>
+                </li>
+                <li class="ptt-footer__address-phone">
+                  <a href="tel:+351123456789">(+351) 123 456 789</a>
+                </li>
+              </ul>
+            </address>
+          </section>
+          <section class="ptt-footer__info">
+            <div class="ptt-footer__info-year">
+              ©Year-<span id="footer-year"></span> Company. All rights
+              reserved.
+            </div>
+            <div class="ptt-footer__info-legal">
+              Privacy Policy. Cookies. Legal.
+            </div>
+            <div class="ptt-footer__info-credit">
+              Powered by
+              <a href="https://plasttic.dev">Plasttic</a>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!------------- TEMPLATE END ------------->
+</html>
