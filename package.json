@@ -96,14 +96,14 @@
     "@csstools/postcss-global-data": "^3.1.0",
     "@csstools/postcss-progressive-custom-properties": "^4.2.1",
     "@fullhuman/postcss-purgecss": "^7.0.2",
-    "@playwright/test": "^1.55.1",
-    "@rushstack/eslint-patch": "^1.12.0",
+    "@playwright/test": "^1.56.0",
+    "@rushstack/eslint-patch": "^1.13.0",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.18.6",
-    "@typescript-eslint/eslint-plugin": "^8.44.1",
-    "@typescript-eslint/parser": "^8.44.1",
-    "@typescript-eslint/typescript-estree": "^8.44.1",
+    "@types/node": "^22.18.8",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "@typescript-eslint/typescript-estree": "^8.46.0",
     "autoprefixer": "^10.4.21",
     "babel-preset-airbnb": "^5.0.0",
     "browser-sync": "^3.0.4",
@@ -155,7 +155,7 @@
     "rehype-minify-whitespace": "^6.0.2",
     "rehype-remove-comments": "^6.1.1",
     "socket.io": "^4.8.1",
-    "stylelint": "^16.24.0",
+    "stylelint": "^16.25.0",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-order": "^7.0.0",
     "ts-jest": "^29.4.4",
@@ -167,7 +167,7 @@
     "jest-cli": "^30.2.0",
     "lighthouse": "^12.8.2",
     "unlighthouse": "^0.17.4",
-    "zod": "^4.1.11"
+    "zod": "^4.1.12"
   },
   "eslintConfig": {
     "extends": [
