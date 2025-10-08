@@ -113,7 +113,7 @@
     "cpx2": "^8.0.0",
     "cssnano": "^7.1.1",
     "cssnano-preset-default": "^7.0.9",
-    "del-cli": "^5.1.0",
+    "del-cli": "^7.0.0",
     "eslint": "8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
