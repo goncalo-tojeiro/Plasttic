@@ -14,9 +14,11 @@
 - :warning: Removed: Dependabot Auto Merge
 - :warning: Updated: Added lock files to gitignore
 - :warning: Updated: Ignore Dependabot and Renovate branches in plasttic-ci.yml
-- :warning: Updated: Dependabot updates github-actions in main branch
+- :warning: Updated: Dependabot updates github-actions in main branch and added prefix 'main(workflow-actions)'
 - :warning: Updated: Eslint fixed version 8.57.0
 - :warning: Updated: Github Actions to use Node 20
+- :warning: Removed: private folder
+- :warning: Updated: postcss-nested to postcss-nesting
 
 ---
 

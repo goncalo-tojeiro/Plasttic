@@ -1,4 +1,4 @@
-# Include your project-specific ignores in this file
+´# Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 # Useful .gitignore templates: https://github.com/github/gitignore
 
@@ -13,7 +13,6 @@ settings.json
 node_modules/
 
 # private folders and files
-certs/
 .env
 .cache
 
@@ -22,15 +21,12 @@ dev/
 dist/
 lib/
 
-# ignore files adding -nogit
+# ignore files adding -nogit to the name
+# used for tests without deleting or moving the file
 *-nogit*
 
-# project folders and files
+# temporary folders and files
 archive/
-**/sources/
-**/NOTES.md
-**/boilerplate/
-*.tree
 
 # testing
 tests/**/reports/*.*
