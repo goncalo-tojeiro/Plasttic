@@ -47,7 +47,7 @@ jobs:
       - name: ci
         uses: pnpm/action-setup@v4
         with:
-          version: 10.17.1
+          version: 10.18.3
 
       # Installs dependencies
       - run: pnpm install
