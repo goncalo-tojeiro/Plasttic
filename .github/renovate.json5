@@ -1,0 +1,21 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: ['config:recommended', 'group:allNonMajor'],
+  labels: ['dependency'],
+  rangeStrategy: 'bump',
+  ignorePaths: ['**/node_modules/**', '**/package/**'],
+
+  // Wait well over npm's three day window for any new package as a precaution against malicious publishes
+  minimumReleaseAge: '3 days',
+
+  baseBranches: ['develop'],
+  timezone: 'Europe/Lisbon',
+  schedule: ['after 10pm on sunday'],
+  postUpdateOptions: ['pnpmDedupe'],
+  prHourlyLimit: 0,
+  prConcurrentLimit: 0,
+  ignoreDeps: [
+    // Ignore "engines" update
+    'node',
+  ],
+}

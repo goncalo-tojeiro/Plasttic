@@ -1,0 +1,3549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v5.2.1" />
+    <link
+      rel="preload"
+      href="/fonts/HafferMedium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/HafferMediumItalic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/HafferXHBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/HafferXHBoldItalic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/SaansBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/SaansMedium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/SaansRegular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/SaansRegularItalic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="set.studio" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Set.Studio</title>
+    <link rel="canonical" href="https://set.studio/" />
+    <meta property="og:site_name" content="Set.Studio" />
+    <meta property="og:title" content="Set.Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://set.studio/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:image"
+      content="https://set.studio/setstudio-social-share.png?v=1749809382249"
+    />
+    <meta
+      name="twitter:image"
+      content="https://set.studio/setstudio-social-share.png?v=1749809382249"
+    />
+    <meta property="og:image:alt" content="Page image for Set.Studio" />
+    <meta name="twitter:image:alt" content="Page image for Set.Studio" />
+    <meta
+      name="description"
+      content="Design partners for brands that adapt fast and thrive. Our smart, low-risk approach keeps you ahead with strategic, high-impact design."
+    />
+    <meta
+      name="twitter:description"
+      content="Design partners for brands that adapt fast and thrive. Our smart, low-risk approach keeps you ahead with strategic, high-impact design."
+    />
+    <meta
+      property="og:description"
+      content="Design partners for brands that adapt fast and thrive. Our smart, low-risk approach keeps you ahead with strategic, high-impact design."
+    />
+    <style>
+      .hero-region {
+        overflow-x: hidden;
+      }
+      .hero-region h1 {
+        font-size: var(--size-step-7);
+        line-height: var(--leading-flat);
+        margin-block-end: var(--region-space);
+        width: 110vw;
+      }
+      .hero-region strong {
+        display: block;
+        font-size: var(--size-step-4);
+        font-style: normal;
+        letter-spacing: var(--kerning);
+      }
+      .hero-region__projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+      }
+      .hero-region__projects > * {
+        flex-grow: 1;
+      }
+      @media (max-width: 55em) {
+        .hero-region strong {
+          font-size: var(--size-step-1);
+        }
+        .hero-region__projects > * {
+          flex-basis: 100%;
+        }
+      }
+      .project-card {
+        --gutter: var(--space-s);
+        --padding: var(--space-2xs);
+        --border-radius: var(--space-l);
+        aspect-ratio: 1/1;
+        position: relative;
+      }
+      .project-card:after,
+      .project-card:before {
+        aspect-ratio: 1/1;
+        border: var(--stroke);
+        content: '';
+        display: block;
+        position: absolute;
+        will-change: transform;
+      }
+      .project-card:after {
+        border-radius: var(--border-radius);
+        width: 100%;
+      }
+      .project-card:before {
+        border-radius: calc(var(--border-radius) - var(--padding) * 0.5);
+        width: calc(100% - var(--padding));
+      }
+      .project-card img {
+        aspect-ratio: 1/1;
+        background-color: var(--color-light);
+        border: var(--stroke);
+        border-radius: calc(var(--border-radius) - var(--padding));
+        max-width: calc(100% - var(--padding) * 2);
+        min-width: calc(100% - var(--padding) * 2);
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        width: calc(100% - var(--padding) * 2);
+        will-change: transform;
+        z-index: 1;
+      }
+      [data-project-card-variant='top-right'] img,
+      [data-project-card-variant='top-right']:before {
+        right: var(--project-card-right);
+        top: var(--project-card-top);
+        transform: translate(var(--project-card-x), var(--project-card-y));
+      }
+      [data-project-card-variant='top-left'] img,
+      [data-project-card-variant='top-left']:before {
+        left: var(--project-card-left);
+        top: var(--project-card-top);
+        transform: translate(var(--project-card-x), var(--project-card-y));
+      }
+      [data-project-card-variant='bottom-right'] img,
+      [data-project-card-variant='bottom-right']:before {
+        bottom: var(--project-card-bottom);
+        right: var(--project-card-right);
+        transform: translate(var(--project-card-x), var(--project-card-y));
+      }
+      .intro-region__container {
+        --gutter: var(--space-xl);
+        --sidebar-content-min-width: 65%;
+        --sidebar-target-width: 25rem;
+        align-items: flex-start;
+      }
+      .intro-region__body {
+        max-width: 59.4rem;
+      }
+      .intro-region__heading h2 {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+        font-size: var(--size-step-5);
+        margin-block-end: var(--space-s);
+      }
+      .intro-region__media {
+        height: auto;
+        max-width: 50vi;
+      }
+      .intro-region__heading {
+        margin-block-end: var(--space-m);
+        text-box: trim-both cap alphabetic;
+      }
+      .features-region .grid {
+        --gutter: var(--space-l);
+      }
+      .features-region__col {
+        display: grid;
+        gap: var(--flow-space);
+        grid-row: span 2;
+        grid-template-rows: subgrid;
+      }
+      .features-region__heading {
+        border-block-end: var(--stroke);
+        font-size: var(--size-step-1);
+        padding-block-end: var(--space-xs);
+      }
+      .features-region :is(ul, ol) {
+        margin-block: 0;
+      }
+      .features-region :is(li, p) {
+        font-size: var(--size-step--1);
+      }
+      .eyebrow > :is(h1, h2, h3, h4, h5, h6) {
+        --heading-font-family: var(--font-base);
+        --heading-font-weight: var(--font-medium);
+        --heading-kerning: var(--kerning-caps);
+        font-size: var(--size-step--3);
+        margin-block-end: var(--space-l);
+        text-transform: uppercase;
+      }
+      .work-region {
+        --global-style-ul-indent-space: 0;
+      }
+      .work-region li {
+        padding-inline-end: var(--space-s-m);
+      }
+      .work-region__grid {
+        display: grid;
+        grid-template-columns: repeat(var(--count), 100%);
+        padding-block-end: var(--scroll-bar-offset);
+        scroll-padding-left: 1px;
+      }
+      .work-region li {
+        display: grid;
+        grid-row: span 2;
+        grid-template-rows: subgrid;
+      }
+      @media (min-width: 55em) {
+        .work-region__grid {
+          grid-template-columns: repeat(
+            var(--count),
+            calc(60% - var(--space-l))
+          );
+        }
+      }
+      .work-card {
+        display: grid;
+        grid-row: span 2;
+        grid-template-rows: subgrid;
+      }
+      .work-card__impact {
+        border: var(--stroke);
+        border-radius: var(--space-l);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        padding-block-start: var(--space-s);
+        padding-inline: var(--space-s);
+        position: relative;
+      }
+      .work-card__statement {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--space-xs);
+        margin-block-end: var(--space-s);
+        max-width: 40ch;
+        text-box: trim-both cap alphabetic;
+        font-family: var(--heading-font-family);
+        font-size: var(--size-step--1);
+        font-weight: var(--heading-font-weight);
+        letter-spacing: var(--heading-kerning);
+        line-height: var(--leading-slim);
+        text-wrap: balance;
+      }
+      .work-card .icon {
+        height: auto;
+        width: min(10vw, 4rem);
+      }
+      .work-card__media {
+        border-radius: var(--space-xs) var(--space-xs) 0 0;
+        display: block;
+        min-width: 100%;
+      }
+      .work-card__meta {
+        --gutter: var(--space-3xs-2xs);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: var(--size-step--2);
+        gap: var(--space-3xs) var(--gutter);
+        margin-inline-start: var(--space-s);
+        text-wrap: balance;
+      }
+      .work-card__meta span {
+        font-size: 0.9em;
+      }
+      .work-card__client {
+        flex-shrink: 0;
+        font-size: var(--size-step--3);
+        font-weight: var(--font-medium);
+        letter-spacing: var(--kerning-caps);
+        text-transform: uppercase;
+      }
+      @media (max-width: 30em) {
+        .work-card__statement {
+          align-items: flex-start;
+        }
+        .work-card__meta {
+          margin-inline-start: 0;
+        }
+      }
+      @media (min-width: 75em) {
+        .work-card__statement {
+          font-size: var(--size-step-0);
+        }
+        .work-card__meta {
+          flex-direction: row;
+        }
+      }
+      .the-studio-region {
+        --switcher-target-container-width: 40rem;
+      }
+      .the-studio-region__heading {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+        font-size: var(--size-step-5);
+      }
+      .the-studio-region__body,
+      .the-studio-region__heading {
+        text-box: trim-both cap alphabetic;
+      }
+      .the-studio-region ul.team[role='list'] {
+        margin-block-start: var(--space-l);
+      }
+      .the-studio-region .switcher {
+        container: the-studio-region-switcher/inline-size;
+      }
+      @container the-studio-region-switcher (min-width: 40rem) {
+        .the-studio-region__heading {
+          position: sticky;
+          top: var(--space-l);
+        }
+      }
+      .team {
+        container: team/inline-size;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+      }
+      .team li {
+        flex-grow: 1;
+      }
+      .team-card {
+        --flow-space: var(--space-2xs);
+        --matched-radius-padding: var(--space-xs);
+        --matched-radius-inner-size: var(--space-xs);
+        border: var(--stroke);
+        border-radius: calc(
+          var(--matched-radius-inner-size) + var(--matched-radius-padding)
+        );
+        padding: var(--space-xs);
+      }
+      .team-card__media {
+        aspect-ratio: 1/1;
+        border: var(--stroke);
+        border-radius: var(--matched-radius-inner-size);
+        width: 9.375rem;
+      }
+      .team-card:not([data-team-card-variant='stretch']) .team-card__media {
+        margin-block-end: var(--space-xs);
+      }
+      .team-card__name {
+        font-size: var(--size-step-1);
+        text-box: trim-both cap alphabetic;
+        word-wrap: normal;
+      }
+      @container team ((width < 50cqi) and (width > 48cqi)) {
+        .team-card:not([data-team-card-variant='stretch']) .team-card__name {
+          max-width: 1ch;
+        }
+      }
+      .team-card__role {
+        font-size: var(--size-step--3);
+        font-weight: var(--font-medium);
+        letter-spacing: var(--kerning-caps);
+        margin-block-start: var(--space-3xs);
+        text-transform: uppercase;
+      }
+      .team-card__bio {
+        font-size: var(--size-step--3);
+        max-width: 19ch;
+      }
+      .team-card[data-team-card-variant='stretch'] {
+        --flow-space: var(--space-xs);
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs) calc(var(--space-xs) * 4.5);
+      }
+      .team-card[data-team-card-variant='stretch'] > * {
+        flex-grow: 1;
+        min-width: round(calc(50% - var(--gutter) * 2));
+      }
+      .experience-region {
+        --flow-space: var(--space-s);
+      }
+      .experience-region__body {
+        max-width: 50.625rem;
+      }
+      .experience-region__stacked-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-block-end: var(--region-space);
+        overflow: hidden;
+        position: relative;
+      }
+      .experience-region .logo-grid {
+        margin-block-start: var(--region-space);
+      }
+      @media (max-width: 65em) {
+        .experience-region__stacked-cards {
+          flex-direction: column;
+        }
+      }
+      .logo-grid__list {
+        align-items: center;
+        display: grid;
+        gap: var(--space-l);
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      .logo-grid__list img {
+        display: block;
+        height: auto;
+        margin-inline: auto;
+        width: inherit;
+      }
+      .stacked-card {
+        --overlap: var(--space-m);
+        --placeholder-width: 11rem;
+        background-color: var(--color-light);
+        border: var(--stroke);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-l);
+        overflow: hidden;
+        position: relative;
+      }
+      .stacked-card span {
+        font-family: var(--font-statement);
+        font-size: var(--size-step-0);
+        font-weight: var(--font-bold);
+      }
+      .stacked-card__heading {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+        margin-inline-start: auto;
+        max-width: 12ch;
+        text-box: trim-both cap alphabetic;
+        font-size: var(--size-step-4);
+      }
+      .stacked-card[data-stacked-card-variant='placeholder'] {
+        border-radius: var(--space-m) 0 0 var(--space-m);
+        margin-inline-start: calc(var(--overlap) * -1);
+        width: var(--overlap);
+      }
+      .stacked-card:not([data-stacked-card-variant='placeholder']),
+      .stacked-card[data-stacked-card-variant='placeholder'] span {
+        padding-block: var(--space-s) var(--space-l);
+        padding-inline: var(--space-s) var(--space-l);
+      }
+      .stacked-card:not([data-stacked-card-variant='placeholder']) {
+        border-radius: var(--space-m);
+        margin-inline-start: calc(var(--overlap) * -1);
+        width: calc(
+          100% - (var(--count) - 1) *
+            (var(--placeholder-width) - var(--overlap))
+        );
+      }
+      .stacked-card[data-stacked-card-index='0'] {
+        margin-inline-start: 0;
+      }
+      @media (max-width: 65em) {
+        .stacked-card[data-stacked-card-variant='placeholder'] {
+          border-radius: var(--space-m) var(--space-m) 0 0;
+          height: var(--overlap);
+          margin-block-end: calc(var(--overlap) * -1);
+          margin-inline-start: 0;
+          width: 100%;
+        }
+        .stacked-card:not([data-stacked-card-variant='placeholder']) {
+          margin-inline-start: 0;
+          width: 100%;
+        }
+      }
+      .testimonials-region {
+        --reel-item-width: calc(100% - var(--space-l) * 2);
+      }
+      .testimonials-region li {
+        border-block: var(--stroke);
+        padding-block: var(--space-l);
+      }
+      .testimonials-region li:last-child {
+        flex-basis: 100%;
+      }
+      .testimonials-region ul {
+        --gutter: var(--space-l);
+      }
+      .testimonials-region ul li:last-child {
+        padding-inline-end: var(--space-s-m);
+      }
+      .quote {
+        --gutter: var(--space-2xs);
+        --cluster-vertical-alignment: baseline;
+      }
+      .quote small {
+        font-family: var(--font-base);
+        font-weight: var(--font-medium);
+        letter-spacing: var(--kerning-caps);
+        text-transform: uppercase;
+      }
+      .approach-region__container {
+        --gutter: var(--space-xl);
+        --sidebar-content-min-width: 65%;
+        --sidebar-target-width: 25rem;
+        align-items: flex-start;
+      }
+      .approach-region__body {
+        max-width: 59.4rem;
+      }
+      .approach-region__heading {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+        font-size: var(--size-step-4);
+        margin-block-end: var(--space-m);
+        text-box: trim-both cap alphabetic;
+      }
+      .approach-region .arrow {
+        max-width: 50vi;
+        position: relative;
+        top: -1.1ex;
+        width: 100%;
+      }
+      .arrow {
+        height: auto;
+        max-width: 100%;
+      }
+      .points-of-difference-region {
+        padding-block-end: calc(var(--region-space) - var(--scroll-bar-offset));
+      }
+      .points-of-difference-region thead th:first-child,
+      .points-of-difference-region tr td:first-child {
+        padding-inline-end: var(--space-xs);
+      }
+      .points-of-difference-region thead th:last-child,
+      .points-of-difference-region tr td:last-child {
+        padding-inline-start: var(--space-xs);
+        text-align: right;
+      }
+      .points-of-difference-region td {
+        min-width: 15rem;
+        width: 50%;
+      }
+      .points-of-difference-region__explainer {
+        align-items: center;
+        display: flex;
+        gap: var(--space-xs);
+      }
+      .points-of-difference-region
+        tr
+        td:last-child
+        .points-of-difference-region__explainer {
+        flex-direction: row-reverse;
+      }
+      .points-of-difference-region__explainer .icon {
+        height: min(10vw, 2.8rem);
+        width: auto;
+      }
+      @media (max-width: 30em) {
+        .points-of-difference-region {
+          --global-style-table-th-font-size: var(--size-step-0);
+          --global-style-table-td-font-size: var(--size-step--2);
+        }
+      }
+      .call-to-action__container {
+        --gutter: var(--space-l);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gutter);
+        justify-content: space-between;
+      }
+      .call-to-action__body {
+        --gutter: var(--space-s);
+        --flow-space: var(--space-s);
+        flex-grow: 1;
+        text-box: trim-both cap alphabetic;
+      }
+      .call-to-action__body p {
+        text-wrap: pretty;
+      }
+      .call-to-action__heading {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+        --heading-line-height: var(--leading-tight);
+        max-width: 100%;
+        width: 100%;
+        text-box: trim-both cap alphabetic;
+        font-size: var(--size-step-6);
+      }
+      .call-to-action__footnote {
+        font-size: var(--size-step--3);
+        margin-block-start: var(--space-l);
+      }
+      @media (min-width: 65em) {
+        .call-to-action__heading {
+          max-width: 55%;
+        }
+        .call-to-action__body {
+          width: calc(45% - var(--space-l));
+        }
+      }
+      .header {
+        background: var(--color-light);
+        padding-block-start: var(--space-xs-s);
+        position: relative;
+        z-index: 1;
+      }
+      .header .wrapper {
+        container: hero-wrapper/inline-size;
+      }
+      .header__container {
+        --gutter: var(--space-xs);
+        border: var(--stroke);
+        border-radius: var(--space-m);
+        padding-block: var(--space-xs);
+        padding-inline: var(--space-m);
+        position: relative;
+      }
+      .header a:has(.set-studio-logo):hover .set-studio-logo__set {
+        color: var(--color-primary);
+      }
+      .header .set-studio-logo {
+        transform: translateY(-0.15ex);
+      }
+      @container hero-wrapper (width <= 35rem) {
+        .header__container {
+          --repel-horizontal-alignment: center;
+        }
+      }
+      .set-studio-logo {
+        --small-variant-width: 10rem;
+        display: block;
+      }
+      .set-studio-logo[data-set-studio-logo-variant='small'] {
+        height: auto;
+        width: var(--small-variant-width);
+      }
+      .navigation {
+        --gutter: var(--space-2xs);
+        --global-style-link-text-decoration: none;
+        --global-style-link-hover-text-decoration: underline;
+        --cluster-horizontal-alignment: center;
+      }
+      .navigation a,
+      .navigation li {
+        display: block;
+        text-box: trim-both cap alphabetic;
+        font-family: var(--font-display);
+        font-size: var(--size-step--3);
+        font-weight: var(--font-medium);
+        text-transform: uppercase;
+      }
+      .navigation li:last-child {
+        font-style: italic;
+      }
+      .footer {
+        --switcher-last-child-width: 27rem;
+        --switcher-horizontal-alignment: space-between;
+        --global-style-hr-space: 0 var(--space-l);
+        --global-style-link-text-decoration: none;
+        --global-style-link-hover-text-decoration: underline;
+        --global-style-link-hover-underline-offset: auto;
+        --global-style-hr-stroke: 1px solid var(--color-light);
+        background-color: var(--color-primary);
+        bottom: 0;
+        color: var(--color-light);
+        left: 0;
+        padding-block: var(--space-xl);
+        position: sticky;
+        z-index: 0;
+      }
+      .footer .switcher:first-of-type {
+        --switcher-vertical-alignment: flex-end;
+        margin-block-end: var(--space-3xl);
+      }
+      .footer .switcher > :last-child {
+        max-width: var(--switcher-last-child-width);
+        width: 100%;
+      }
+      .footer__company {
+        font-size: var(--size-step-2);
+        line-height: var(--leading-slim);
+        margin-block: var(--space-xl) var(--space-3xl);
+      }
+      .footer__company h2 {
+        --heading-kerning: 0;
+        --measure-heading-2: 19ch;
+        --text-size-heading-2: var(--size-step-2);
+        --heading-font-weight: var(--font-normal);
+        --heading-line-height: var(--leading-slim);
+        font-family: var(--font-base);
+      }
+      .footer small {
+        font-size: 0.75rem;
+        line-height: var(--leading-short);
+      }
+      .socials {
+        --gutter: var(--space-s);
+        --global-style-link-text-decoration: none;
+        --global-style-link-hover-text-decoration: underline;
+        --global-style-link-hover-underline-offset: auto;
+        font-size: var(--size-step--1);
+      }
+      .socials a:focus-visible {
+        --focus-color: var(--color-light);
+      }
+      @font-face {
+        font-display: swap;
+        font-family: HafferMedium;
+        font-style: normal;
+        font-weight: 500;
+        src: url(/fonts/HafferMedium.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: HafferMedium;
+        font-style: italic;
+        font-weight: 500;
+        src: url(/fonts/HafferMediumItalic.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: HafferXH;
+        font-style: normal;
+        font-weight: 700;
+        src: url(/fonts/HafferXHBold.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: HafferXH;
+        font-style: italic;
+        font-weight: 700;
+        src: url(/fonts/HafferXHBoldItalic.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Saans;
+        font-style: normal;
+        font-weight: 700;
+        src: url(/fonts/SaansBold.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Saans;
+        font-style: normal;
+        font-weight: 500;
+        src: url(/fonts/SaansMedium.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Saans;
+        font-style: normal;
+        font-weight: 400;
+        src: url(/fonts/SaansRegular.woff2) format('woff2');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Saans;
+        font-style: italic;
+        font-weight: 400;
+        src: url(/fonts/SaansRegularItalic.woff2) format('woff2');
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+      html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+      }
+      :where(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) {
+        margin-block: 0;
+      }
+      blockquote,
+      body,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-block-end: 0;
+      }
+      ol[role='list'],
+      ul[role='list'] {
+        list-style: none;
+      }
+      body {
+        line-height: 1.5;
+        min-height: 100vh;
+      }
+      button,
+      h1,
+      h2,
+      h3,
+      h4,
+      input,
+      label {
+        line-height: 1.1;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        text-wrap: balance;
+      }
+      a:not([class]) {
+        color: currentColor;
+        text-decoration-skip-ink: auto;
+      }
+      img,
+      picture {
+        display: block;
+        max-width: 100%;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: inherit;
+      }
+      textarea:not([rows]) {
+        min-height: 10em;
+      }
+      :target {
+        scroll-margin-block: 5ex;
+      }
+      :root {
+        --color-accent: currentColor;
+        --color-disabled: var(--color-mid);
+        --color-light: #fefbf6;
+        --color-light-shade: #d4d1cd;
+        --color-dark: #2b2b2b;
+        --color-dark-glare: #4b4a49;
+        --color-mid: #6a6968;
+        --color-mid-shade: #a6a5a4;
+        --color-primary: #e01616;
+        --color-primary-glare: #e64443;
+        --color-primary-shade: #bc1a1a;
+        --color-global-bg: var(--color-light);
+        --color-global-link-color: currentColor;
+        --color-global-text: var(--color-dark);
+        --color-selection-bg: var(--color-dark);
+        --color-selection-text: var(--color-light);
+        --flow-space: var(--space-xs);
+        --focus-color: var(--color-primary);
+        --focus-ring: 2px solid currentColor;
+        --focus-ring-offset: 2px;
+        --heading-kerning: var(--kerning-tight);
+        --heading-line-height: var(--leading-fine);
+        --heading-font-family: var(--font-display);
+        --heading-font-weight: var(--font-medium);
+        --font-base: 'Saans', system-ui, sans-serif;
+        --font-display: 'HafferMedium', system-ui, sans-serif;
+        --font-statement: 'HafferXH', system-ui, sans-serif;
+        --font-mono: inherit;
+        --font-normal: 400;
+        --font-medium: 500;
+        --font-bold: 700;
+        --font-black: 900;
+        --gutter: var(--space-s-m);
+        --gutter-l: var(--space-3xl);
+        --kerning: normal;
+        --kerning-loose: 0.05ch;
+        --kerning-tight: -0.04ch;
+        --kerning-caps: 0.1ch;
+        --leading: 1.45;
+        --leading-tight: 0.8;
+        --leading-short: 1.36;
+        --leading-slim: 1.18;
+        --leading-fine: 1.09;
+        --leading-flat: 1;
+        --leading-loose: 1.7;
+        --measure: 65ch;
+        --measure-heading-1: 30ch;
+        --measure-heading-2: 45ch;
+        --measure-heading-3: 45ch;
+        --measure-heading-4: 45ch;
+        --measure-heading-5: 45ch;
+        --measure-heading-6: 45ch;
+        --measure-l: 75ch;
+        --measure-m: 50ch;
+        --measure-s: 45ch;
+        --measure-xs: 20ch;
+        --off-screen-trigger-height: 1.5rem;
+        --radius: 0.5em;
+        --radius-l: 2em;
+        --radius-m: 1em;
+        --radius-s: 0.25em;
+        --container-max-width: 57rem;
+        --wrapper-max-width: 1566px;
+        --region-space: var(--space-xl-2xl);
+        --stroke: 1px solid var(--stroke-color, currentColor);
+        --stroke-weight-heavy: 6px;
+        --stroke-weight-medium: 4px;
+        --stroke-weight-light: 1px;
+        --text-size-base: var(--size-step-0);
+        --text-size-heading-1: var(--size-step-5);
+        --text-size-heading-2: var(--size-step-4);
+        --text-size-heading-3: var(--size-step-3);
+        --text-size-heading-4: var(--size-step-2);
+        --text-size-heading-5: var(--size-step-2);
+        --text-size-heading-6: var(--size-step-2);
+        --text-size-lede: var(--size-step-1);
+        --text-size-meta: var(--size-step--1);
+        --text-size-prose: var(--text-size-base);
+        --text-size-small: 0.75em;
+        --scroll-bar-track-color: var(--color-light-shade);
+        --scroll-bar-thumb-color: var(--color-mid);
+        --scroll-bar-radius: 0;
+        --scroll-bar-offset: var(--space-l);
+        --button-gap: var(--gutter);
+        --button-padding: var(--space-2xs) var(--space-s);
+        --button-bg: var(--color-dark);
+        --button-text: var(--color-light);
+        --button-leading: var(--leading-flat);
+        --button-border-color: var(--color-dark);
+        --button-border-width: var(--stroke-weight-medium);
+        --button-border-style: solid;
+        --button-radius: var(--space-m);
+        --button-box-shadow: none;
+        --button-text-transform: none;
+        --button-font-weight: var(--font-bold);
+        --button-font-size: var(--size-step--1);
+        --button-font-family: var(--font-statement);
+        --button-kerning: var(--kerning);
+        --button-interact-bg: var(--color-dark);
+        --button-interact-text: var(--color-light);
+        --button-interact-border-color: var(--color-primary);
+        --space-3xs: clamp(0.3125rem, 0.2483rem + 0.321vw, 0.5625rem);
+        --space-2xs: clamp(0.5625rem, 0.418rem + 0.7223vw, 1.125rem);
+        --space-xs: clamp(0.875rem, 0.6663rem + 1.0433vw, 1.6875rem);
+        --space-s: clamp(1.125rem, 0.8361rem + 1.4446vw, 2.25rem);
+        --space-m: clamp(1.6875rem, 1.2541rem + 2.1669vw, 3.375rem);
+        --space-l: clamp(2.25rem, 1.6722rem + 2.8892vw, 4.5rem);
+        --space-xl: clamp(3.375rem, 2.5082rem + 4.3339vw, 6.75rem);
+        --space-2xl: clamp(4.5rem, 3.3443rem + 5.7785vw, 9rem);
+        --space-3xl: clamp(6.75rem, 5.0165rem + 8.6677vw, 13.5rem);
+        --space-3xs-2xs: clamp(0.3125rem, 0.1038rem + 1.0433vw, 1.125rem);
+        --space-2xs-xs: clamp(0.5625rem, 0.2736rem + 1.4446vw, 1.6875rem);
+        --space-xs-s: clamp(0.875rem, 0.5219rem + 1.7657vw, 2.25rem);
+        --space-s-m: clamp(1.125rem, 0.5472rem + 2.8892vw, 3.375rem);
+        --space-m-l: clamp(1.6875rem, 0.9652rem + 3.6116vw, 4.5rem);
+        --space-l-xl: clamp(2.25rem, 1.0943rem + 5.7785vw, 6.75rem);
+        --space-xl-2xl: clamp(3.375rem, 1.9304rem + 7.2231vw, 9rem);
+        --space-2xl-3xl: clamp(4.5rem, 2.1886rem + 11.557vw, 13.5rem);
+        --space-s-l: clamp(1.125rem, 0.2582rem + 4.3339vw, 4.5rem);
+        --size-step--3: clamp(0.875rem, 0.8462rem + 0.1439vw, 1rem);
+        --size-step--2: clamp(1rem, 0.9712rem + 0.1439vw, 1.125rem);
+        --size-step--1: clamp(1.125rem, 1.0818rem + 0.2158vw, 1.3125rem);
+        --size-step-0: clamp(1.25rem, 1.1349rem + 0.5755vw, 1.75rem);
+        --size-step-1: clamp(1.5rem, 1.3273rem + 0.8633vw, 2.25rem);
+        --size-step-2: clamp(1.75rem, 1.5773rem + 0.8633vw, 2.5rem);
+        --size-step-3: clamp(2rem, 1.7698rem + 1.1511vw, 3rem);
+        --size-step-4: clamp(2.25rem, 1.7176rem + 2.6619vw, 4.5625rem);
+        --size-step-5: clamp(2.625rem, 1.6754rem + 4.7482vw, 6.75rem);
+        --size-step-6: clamp(3rem, 0.0504rem + 14.7482vw, 15.8125rem);
+        --size-step-7: clamp(3.8125rem, 0.0427rem + 18.8489vw, 20.1875rem);
+        --global-style-accent-color: var(--color-dark);
+        --global-style-blockquote-foot-space: 0;
+        --global-style-blockquote-footer-color: inherit;
+        --global-style-blockquote-size: var(--size-step-1);
+        --global-style-blockquote-footer-size: var(--size-step--1);
+        --global-style-blockquote-footer-font-family: var(--font-display);
+        --global-style-blockquote-footer-text-transform: none;
+        --global-style-blockquote-footer-kerning: var(--kerning-tight);
+        --global-style-blockquote-footer-order: 0;
+        --global-style-blockquote-quote-font-family: var(--font-display);
+        --global-style-blockquote-quote-style: normal;
+        --global-style-blockquote-quote-max-width: 39ch;
+        --global-style-blockquote-gap: var(--space-s);
+        --global-style-dd-dt-relation-spacing: var(--space-xs);
+        --global-style-dd-indent: 1.5ch;
+        --global-style-dt-dd-relation-spacing: var(--space-xs);
+        --global-style-dt-font-weight: var(--font-medium);
+        --global-style-details-open-space: var(--space-s);
+        --global-style-fieldset-padding: var(--space-s);
+        --global-style-fieldset-stroke: var(--stroke);
+        --global-style-figure-margin-inline: 0;
+        --global-style-figcaption-font: var(--font-base);
+        --global-style-figcaption-size: var(--size-step--2);
+        --global-style-figcaption-space: var(--space-2xs);
+        --global-style-font-size-adjust-fallback: 0.8em;
+        --global-style-link-text-decoration: revert;
+        --global-style-link-hover-text-decoration: revert;
+        --global-style-heading-link-hover-underline-offset: 0.3ex;
+        --global-style-heading-link-underline-offset: 0.2ex;
+        --global-style-heading-link-underline-thickness: 0.1ex;
+        --global-style-hr-space: var(--flow-space, var(--space-xl));
+        --global-style-hr-stroke: var(--stroke);
+        --global-style-input-bg: var(--color-light);
+        --global-style-input-color: var(--color-dark);
+        --global-style-input-disabled-color: var(--color-mid);
+        --global-style-input-padding: var(--space-2xs) var(--space-s);
+        --global-style-input-placeholder-color: var(--color-mid-shade);
+        --global-style-input-radius: var(--space-2xs);
+        --global-style-input-stroke: var(--stroke);
+        --global-style-label-font-size: var(--size-step-1);
+        --global-style-label-font-weight: var(--font-medium);
+        --global-style-label-font-family: var(--font-display);
+        --global-style-label-display: inherit;
+        --global-style-label-leading: var(--leading-fine);
+        --global-style-label-kerning: var(--heading-kerning);
+        --global-style-label-text-transform: none;
+        --global-style-label-with-input-flow-space: var(--space-s-m);
+        --global-style-label-with-input-gap: var(--space-s);
+        --global-style-legend-font-weight: var(--font-medium);
+        --global-style-legend-padding: var(--space-xs);
+        --global-style-link-hover-underline-offset: 0.2lh;
+        --global-style-mono-element-padding: 0;
+        --global-style-ol-indent-space: 1.6rem;
+        --global-style-ol-list-item-extra-space: var(--space-2xs);
+        --global-style-ol-marker-size: 1em;
+        --global-style-li-font-size: var(--size-step--1);
+        --global-style-q-font-style: italic;
+        --global-style-scroll-margin: 5lh;
+        --global-style-summary-font-weight: 400;
+        --global-style-svg-height: 1cap;
+        --global-style-ul-indent-space: 1.15rem;
+        --global-style-ul-list-item-extra-space: var(--space-2xs);
+        --global-style-ul-list-style: disc;
+        --global-style-ul-marker-size: 2.2ex;
+        --global-style-list-vertical-space: 0;
+        --global-style-table-border: none;
+        --global-style-table-th-padding: 0 0 var(--space-xs) 0;
+        --global-style-table-th-font-size: var(--size-step-3);
+        --global-style-table-th-font-family: var(--font-display);
+        --global-style-table-th-font-weight: var(--font-medium);
+        --global-style-table-th-kerning: var(--heading-kerning);
+        --global-style-table-th-bg: none;
+        --global-style-table-th-border-end: var(--stroke);
+        --global-style-table-td-padding: var(--space-s) 0;
+        --global-style-table-td-font-size: var(--size-step--1);
+        --global-style-table-cell-border-inline: none;
+        --global-style-table-cell-border-start: var(--stroke);
+        --project-card-top: 0;
+        --project-card-right: 0;
+        --project-card-bottom: 0;
+        --project-card-left: 0;
+        --project-card-x: 0;
+        --project-card-y: 0;
+      }
+      main {
+        background: var(--color-light);
+        position: relative;
+        transform: translateZ(0);
+        z-index: 1;
+      }
+      body {
+        background: var(--color-global-bg);
+        color: var(--color-global-text);
+        container-type: inline-size;
+        font-family: var(--font-base);
+        font-size: var(--text-size-base);
+        font-size-adjust: from-font;
+        letter-spacing: var(--kerning);
+        line-height: var(--leading);
+        margin: 0;
+      }
+      :is(h1, h2, h3, h4, h5, h6) {
+        font-family: var(--heading-font-family);
+        font-feature-settings: 'cpsp' on;
+        font-weight: var(--heading-font-weight);
+        letter-spacing: var(--heading-kerning, var(--kerning));
+        line-height: var(--heading-line-height, var(--leading-fine));
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+      }
+      :is(h1) {
+        --heading-font-family: var(--font-statement);
+        --heading-font-weight: var(--font-bold);
+      }
+      :is(h2, h3, h4, h5, h6) {
+        --heading-font-family: var(--font-display);
+        --heading-font-weight: var(--font-medium);
+      }
+      h1 {
+        font-size: var(--text-size-heading-1);
+        max-width: var(--measure-heading-1);
+      }
+      h2 {
+        font-size: var(--text-size-heading-2);
+        max-width: var(--measure-heading-2);
+      }
+      h3 {
+        max-width: var(--measure-heading-3);
+      }
+      h3,
+      h4 {
+        font-size: var(--text-size-heading-4);
+      }
+      h4 {
+        max-width: var(--measure-heading-4);
+      }
+      h5 {
+        font-size: var(--text-size-heading-5);
+        max-width: var(--measure-heading-5);
+      }
+      h6 {
+        font-size: var(--text-size-heading-6);
+        max-width: var(--measure-heading-6);
+      }
+      small {
+        font-size: var(--text-size-small);
+      }
+      :is(code, kbd, samp) {
+        font-family: var(--font-mono);
+        hyphens: none;
+        padding: var(--global-style-mono-element-padding);
+        tab-size: 2;
+        text-align: left;
+        word-break: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        box-decoration-break: clone;
+      }
+      @supports not (font-size-adjust: from-font) {
+        :is(code, kbd, samp) {
+          font-size: var(--global-style-font-size-adjust-fallback);
+        }
+      }
+      pre:has(code) {
+        max-width: 100%;
+        overflow-x: auto;
+        width: max-content;
+      }
+      pre code {
+        background: none;
+        border: none;
+        padding: 0;
+      }
+      kbd {
+        border: var(--stroke);
+        text-box-trim: trim-start cap;
+      }
+      q {
+        font-style: var(--global-style-q-font-style);
+      }
+      ul {
+        list-style-type: var(--global-style-ul-list-style);
+        padding-inline-start: var(--global-style-ul-indent-space);
+      }
+      ol {
+        padding-inline-start: var(--global-style-ol-indent-space);
+      }
+      ul:not([class]) > li {
+        padding-inline-start: var(--global-style-ul-list-item-extra-space);
+      }
+      ol:not([class]) > li {
+        padding-inline-start: var(--global-style-ol-list-item-extra-space);
+      }
+      ul ::marker {
+        font-size: var(--global-style-ul-marker-size);
+      }
+      ol ::marker {
+        font-size: var(--global-style-ol-marker-size);
+      }
+      li {
+        font-size: var(--global-style-li-font-size, var(--text-size-base));
+      }
+      :not([class]) > li + li,
+      li:not([class]) > :is(ol, ul) {
+        margin-block-start: var(
+          --global-style-list-vertical-space,
+          var(--space-xs)
+        );
+      }
+      [role='list'][class]:not(.reel, .work-region__grid),
+      [role='tablist'] {
+        margin-block: 0;
+        padding: 0;
+      }
+      dt {
+        font-weight: var(--global-style-dt-font-weight);
+      }
+      dt + dd {
+        margin-block-start: var(--global-style-dt-dd-relation-spacing);
+      }
+      dd + dt {
+        margin-block-start: var(--global-style-dd-dt-relation-spacing);
+      }
+      dd {
+        margin-inline-start: var(--global-style-dd-indent);
+      }
+      blockquote {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--global-style-blockquote-size);
+        gap: var(--global-style-blockquote-gap);
+        margin-inline: 0;
+      }
+      blockquote footer {
+        color: var(--global-style-blockquote-footer-color);
+        font-family: var(
+          --global-style-blockquote-footer-font-family,
+          var(--font-base)
+        );
+        font-size: var(--global-style-blockquote-footer-size);
+        letter-spacing: var(
+          --global-style-blockquote-footer-kerning,
+          var(--kerning-caps)
+        );
+        margin-block-start: var(--global-style-blockquote-foot-space);
+        order: var(--global-style-blockquote-footer-order);
+        text-transform: var(
+          --global-style-blockquote-footer-text-transform,
+          uppercase
+        );
+      }
+      blockquote p,
+      blockquote q {
+        font-family: var(
+          --global-style-blockquote-quote-font-family,
+          var(--font-base)
+        );
+        font-style: var(--global-style-blockquote-quote-style, italic);
+        max-width: var(--global-style-blockquote-quote-max-width, inherit);
+      }
+      :is(video, iframe[src*='youtube'], iframe[src*='vimeo']) {
+        aspect-ratio: 16/9;
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+      :is(img, picture) {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      picture img {
+        width: 100%;
+      }
+      figure {
+        margin-block-start: inherit;
+        margin-inline: var(--global-style-figure-margin-inline, revert);
+      }
+      figcaption {
+        font-family: var(--global-style-figcaption-font);
+        font-size: var(--global-style-figcaption-size);
+        padding-block-start: var(--global-style-figcaption-space);
+      }
+      svg:not([class]) {
+        height: var(--global-style-svg-height);
+        width: auto;
+      }
+      svg {
+        flex-shrink: 0;
+      }
+      table {
+        border: var(--global-style-table-border, var(--stroke));
+        border-collapse: collapse;
+        width: 100%;
+      }
+      thead th {
+        background: var(--global-style-table-th-bg, rgb(0 0 0/2%));
+        font-family: var(--global-style-table-th-font-family, var(--font-base));
+        font-size: var(
+          --global-style-table-th-font-size,
+          var(--text-size-base)
+        );
+        font-weight: var(--global-style-table-th-font-weight, var(--font-bold));
+        letter-spacing: var(--global-style-table-th-kerning, var(--kerning));
+        line-height: var(--global-style-table-th-leading, var(--leading-fine));
+        padding: var(--global-style-table-th-padding, var(--space-s));
+        text-align: left;
+      }
+      td {
+        font-size: var(
+          --global-style-table-td-font-size,
+          var(--text-size-base)
+        );
+        padding: var(
+          --global-style-table-td-padding,
+          var(--space-xs) var(--space-s)
+        );
+      }
+      th:not(:only-of-type) {
+        border-block-end: var(
+          --global-style-table-th-border-end,
+          var(--stroke)
+        );
+      }
+      th:only-of-type {
+        border-inline-end: var(
+          --global-style-table-cell-border-inline,
+          var(--stroke)
+        );
+      }
+      :is(th, td) ~ :is(th, td) {
+        border-inline-start: var(
+          --global-style-table-cell-border-inline,
+          var(--stroke)
+        );
+      }
+      tr + tr :is(th, td) {
+        border-block-start: var(
+          --global-style-table-cell-border-start,
+          var(--stroke)
+        );
+      }
+      caption {
+        caption-side: bottom;
+        margin-block-start: var(--space-2xs, 0.5lh);
+      }
+      a:not([class]) {
+        color: var(--color-global-link-color);
+        text-decoration: var(--global-style-link-text-decoration, revert);
+      }
+      a:not([class]):hover {
+        text-decoration: var(--global-style-link-hover-text-decoration, revert);
+        text-underline-offset: var(--global-style-link-hover-underline-offset);
+      }
+      :is(h1, h2, h3, h4) a:not([class]) {
+        text-decoration-thickness: var(
+          --global-style-heading-link-underline-thickness
+        );
+        text-underline-offset: var(
+          --global-style-heading-link-underline-offset
+        );
+      }
+      :is(h1, h2, h3, h4) a:not([class]):hover {
+        text-underline-offset: var(
+          --global-style-heading-link-hover-underline-offset
+        );
+      }
+      :focus {
+        outline: none;
+      }
+      :focus-visible:not([tabindex='-1']) {
+        outline: 2px solid var(--focus-color);
+        outline-offset: var(--focus-ring-offset);
+      }
+      :target {
+        outline: 0;
+        scroll-margin-block: var(--global-style-scroll-margin);
+      }
+      ::selection {
+        background: var(--color-selection-bg);
+        color: var(--color-selection-text);
+      }
+      hr {
+        border: none;
+        border-block-start: var(--global-style-hr-stroke);
+        margin-block: var(--global-style-hr-space);
+      }
+      svg[role='img'][width][height] {
+        height: revert;
+        width: revert;
+      }
+      form > * + * {
+        margin-top: var(--flow-space);
+      }
+      :is(input, select, textarea) {
+        accent-color: var(--global-style-accent-color);
+      }
+      :is(
+          input:not([type='checkbox'], [type='radio'], [type='color']),
+          select,
+          textarea
+        ) {
+        background: var(--global-style-input-bg);
+        border: var(--global-style-input-stroke);
+        border-radius: var(--global-style-input-radius);
+        color: var(--global-style-input-color);
+        padding: var(--global-style-input-padding);
+        width: 100%;
+        &::placeholder {
+          color: var(--global-style-input-placeholder-color);
+          opacity: 1;
+        }
+      }
+      label {
+        display: var(--global-style-label-display);
+        font-family: var(--global-style-label-font-family);
+        font-size: var(--global-style-label-font-size);
+        font-weight: var(--global-style-label-font-weight);
+        letter-spacing: var(--global-style-label-kerning);
+        line-height: var(--global-style-label-leading);
+        text-transform: var(--global-style-label-text-transform);
+      }
+      label:after {
+        content: '\a';
+        white-space: pre;
+      }
+      label:has(input:is([type='radio'], [type='checkbox'])) {
+        align-items: baseline;
+        display: flex;
+        gap: var(--global-style-label-with-input-gap);
+      }
+      label:has(input) + label:has(input) {
+        --flow-space: var(--global-style-label-with-input-flow-space);
+      }
+      .flow label + input,
+      .flow label + textarea,
+      label + input,
+      label + textarea {
+        margin-block-start: var(--space-2xs);
+      }
+      label:has(input) input {
+        transform: translateY(-0.1ex);
+      }
+      input:disabled {
+        background: var(--global-style-input-disabled-color);
+      }
+      input:disabled,
+      label input:disabled + * {
+        cursor: not-allowed;
+      }
+      fieldset {
+        border: var(--global-style-fieldset-stroke);
+        padding: var(--global-style-fieldset-padding);
+      }
+      legend {
+        font-weight: var(--global-style-legend-font-weight);
+        padding-inline: var(--global-style-legend-padding);
+      }
+      summary {
+        cursor: pointer;
+        font-weight: var(--global-style-summary-font-weight);
+      }
+      details[open] summary {
+        margin-block-end: var(--global-style-details-open-space);
+      }
+      .region + .region {
+        padding-block-start: 0;
+      }
+      .cluster {
+        align-items: var(--cluster-vertical-alignment, center);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--cluster-gutter, var(--gutter, var(--space-s-m)));
+        justify-content: var(--cluster-horizontal-alignment, flex-start);
+      }
+      .flow > * + * {
+        margin-block-start: var(--flow-space, 1em);
+      }
+      .grid {
+        display: grid;
+        gap: var(--gutter, var(--space-s-l));
+        grid-template-columns: repeat(
+          var(--grid-placement, auto-fill),
+          minmax(var(--grid-min-item-size, 16rem), 1fr)
+        );
+      }
+      .grid[data-layout='halves'] {
+        --grid-placement: auto-fit;
+        --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+      }
+      .grid[data-layout='thirds'] {
+        --grid-placement: auto-fit;
+        --grid-min-item-size: clamp(16rem, 33%, 20rem);
+      }
+      .reel {
+        --reel-calculated-space: var(--reel-space, var(--gutter, 2rem));
+        display: flex;
+        height: auto;
+        margin-inline: auto;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 0 0 var(--scroll-bar-offset) 0;
+        -webkit-overflow-scrolling: touch;
+      }
+      .reel > * {
+        flex-basis: var(
+          --reel-item-width,
+          calc(33.333% - var(--reel-calculated-space))
+        );
+        flex-shrink: 0;
+      }
+      .reel > * + * {
+        margin-inline-start: var(--reel-calculated-space);
+      }
+      .reel::-webkit-scrollbar {
+        block-size: var(--scroll-bar-size);
+      }
+      .reel::-webkit-scrollbar-track {
+        background-color: var(--scroll-bar-track-color);
+        border-radius: var(--scroll-bar-radius, 0);
+      }
+      .reel::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-bar-thumb-color);
+        border-radius: var(--scroll-bar-radius, 0);
+      }
+      .reel[data-scroll='snap'] {
+        scroll-snap-type: x mandatory;
+      }
+      .reel[data-scroll='snap'] > * {
+        scroll-snap-align: start;
+      }
+      .repel {
+        align-items: var(--repel-vertical-alignment, center);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gutter, var(--space-s-m));
+        justify-content: var(--repel-horizontal-alignment, space-between);
+      }
+      .repel[data-nowrap] {
+        flex-wrap: nowrap;
+      }
+      .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gutter, var(--space-s-l));
+      }
+      .sidebar:not([data-direction]) > :first-child {
+        flex-basis: var(--sidebar-target-width, 20rem);
+        flex-grow: 1;
+      }
+      .sidebar:not([data-direction]) > :last-child {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-width: var(--sidebar-content-min-width, 50%);
+      }
+      .sidebar[data-reversed] {
+        flex-direction: row-reverse;
+      }
+      .sidebar[data-direction='rtl'] > :last-child {
+        flex-basis: var(--sidebar-target-width, 20rem);
+        flex-grow: 1;
+      }
+      .sidebar[data-direction='rtl'] > :first-child {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-width: var(--sidebar-content-min-width, 50%);
+      }
+      .switcher {
+        align-items: var(--switcher-vertical-alignment, flex-start);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gutter, var(--space-s-l));
+        justify-content: var(--switcher-horizontal-alignment, unset);
+      }
+      .switcher > * {
+        flex-basis: calc(
+          (var(--switcher-target-container-width, 40rem) - 100%) * 999
+        );
+        flex-grow: 1;
+      }
+      .switcher > :nth-child(n + 3) {
+        flex-basis: 100%;
+      }
+      .wrapper {
+        margin-inline: auto;
+        max-width: var(--wrapper-max-width);
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+        position: relative;
+      }
+      .breakout {
+        width: calc(50% + 50vw);
+        width: calc(50% + 50cqw);
+      }
+      .overflow {
+        overflow-x: auto;
+        padding-block-end: var(--scroll-bar-offset);
+        -webkit-overflow-scrolling: touch;
+      }
+      .overflow::-webkit-scrollbar {
+        block-size: var(--scroll-bar-size);
+      }
+      .overflow::-webkit-scrollbar-track {
+        background-color: var(--scroll-bar-track-color);
+        border-radius: var(--scroll-bar-radius, 0);
+      }
+      .overflow::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-bar-thumb-color);
+        border-radius: var(--scroll-bar-radius, 0);
+      }
+      .overflow[data-scroll='snap'] {
+        scroll-snap-type: x mandatory;
+      }
+      .overflow[data-scroll='snap'] > * {
+        scroll-snap-align: start;
+      }
+      .region {
+        padding-block-end: var(--region-space);
+        padding-block-start: var(--region-space);
+      }
+      .region[data-flush='all'] {
+        padding-block-end: 0;
+        padding-block-start: 0;
+      }
+      .region[data-flush='top'] {
+        padding-block-start: 0;
+      }
+      .region[data-flush='bottom'] {
+        padding-block-end: 0;
+      }
+      .visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+      .button {
+        align-items: center;
+        background: var(--button-bg, var(--color-surface-bg));
+        border-color: var(--button-border-color, var(--color-mid));
+        border-radius: var(--button-radius, var(--radius));
+        border-style: var(--button-border-style, solid);
+        border-width: var(--button-border-width, var(--stroke-weight-heavy));
+        box-shadow: var(--button-box-shadow, none);
+        color: var(--button-text, var(--color-surface-text));
+        cursor: pointer;
+        display: inline-flex;
+        font-family: var(--button-font-family, inherit);
+        font-size: var(--button-font-size, var(--size-step--1));
+        font-weight: var(--button-font-weight, var(--font-weight-emphasis));
+        gap: var(--button-gap, var(--gutter));
+        justify-content: center;
+        letter-spacing: var(--button-kerning, var(--kerning-loose));
+        line-height: var(--button-leading, var(--leading-fine));
+        padding: var(
+          --button-padding,
+          var(--space-2xs, 0.8em) var(--space-m, 2em)
+        );
+        text-decoration: none;
+        text-transform: var(--button-text-transform, uppercase);
+        text-box: trim-both cap alphabetic;
+      }
+      .button:hover {
+        background: var(--button-interact-bg, var(--color-surface-bg-interact));
+        border-color: var(
+          --button-interact-border-color,
+          var(--button-interact-bg, var(--color-surface-bg-interact))
+        );
+        color: var(--button-interact-text, var(--color-surface-text-interact));
+      }
+      .button[data-button-variant='primary'] {
+        --button-bg: var(--color-primary);
+        --button-border-color: var(--color-primary);
+      }
+      .button[data-button-variant='primary']:hover {
+        --button-interact-bg: var(--color-primary);
+        --button-interact-text: var(--color-light);
+        --button-interact-border-color: var(--color-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__container repel">
+          <a href="/"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 158 28"
+              role="img"
+              aria-label="Set.Studio"
+              focusable="false"
+              data-set-studio-logo-variant="small"
+              class="set-studio-logo"
+            >
+              <g class="set-studio-logo__set">
+                <path
+                  fill="currentColor"
+                  d="M0 18.61h5.257c.136 2.443 1.9 4.036 4.376 4.036 2.069 0 3.46-.882 3.46-2.544 0-4.002-10.753-2.17-10.753-9.701 0-4.545 3.867-7.462 9.023-7.462 5.528 0 8.14 3.222 8.411 7.462h-5.223c-.305-1.797-1.662-2.883-3.663-2.883-1.764 0-3.154.814-3.154 2.17 0 3.562 10.82 1.662 10.82 9.566 0 4.783-3.663 7.971-9.226 7.971-6.004 0-9.294-4.003-9.328-8.615Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M19.72 18.677c0-6.24 4.58-10.786 10.956-10.786 6.885 0 9.328 5.19 7.666 10.888h-13.5c.17 2.579 1.696 4.105 4.172 4.105 1.797 0 3.154-.848 3.63-2.137h5.291c-1.017 3.698-4.274 6.48-9.429 6.48-5.461 0-8.785-3.223-8.785-8.549Zm13.738-3.663c.17-1.934-1.018-3.154-3.223-3.154-2.204 0-3.866 1.323-4.68 3.154h7.903Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="m40.694 20.848 1.357-8.446h-2.645l.678-4.24h2.645l.61-3.9h5.258l-.61 3.9h3.832l-.678 4.24h-3.833l-1.255 7.971c-.271 1.492.44 2.34 1.797 2.34.577 0 1.357-.135 1.967-.339l-.712 4.376c-.848.305-1.696.474-2.952.474-3.527 0-6.105-2.306-5.461-6.376h.002Z"
+                ></path>
+              </g>
+              <g class="set-studio-logo__dot">
+                <path
+                  fill="currentColor"
+                  d="M50.964 24.207c0-1.73 1.322-2.985 3.052-2.985s3.019 1.256 3.019 2.985c0 1.729-1.323 2.984-3.019 2.984-1.696 0-3.052-1.255-3.052-2.984Z"
+                ></path>
+              </g>
+              <g class="set-studio-logo__studio">
+                <path
+                  fill="currentColor"
+                  d="M56.918 18.61h5.224c.339 2.51 1.934 4.036 4.68 4.036 1.866 0 3.324-.78 3.324-2.544 0-4.138-12.211-1.56-12.211-10.244 0-4.138 3.8-6.92 8.378-6.92 5.258 0 8.514 2.68 9.057 7.463h-5.223c-.34-1.764-1.934-2.883-3.935-2.883-1.764 0-2.917.814-2.917 2.07 0 3.764 12.245.983 12.245 10.175 0 4.715-3.8 7.462-8.718 7.462-5.835 0-9.463-3.323-9.905-8.615h.001Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M78.875 20.78v-8.378H76.23v-4.24h2.645v-3.9h5.258v3.9h3.832v4.24h-3.832v7.87c0 1.56.848 2.442 2.205 2.442.577 0 1.288-.135 1.865-.339v4.376a7.213 7.213 0 0 1-2.645.474c-3.8 0-6.683-2.306-6.683-6.444Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M89.784 20.441V8.162h5.257v10.923c0 2.103 1.323 3.527 3.358 3.527 2.578 0 4.206-2.136 4.206-6.14v-8.31h5.257v18.791h-5.257V24.75c-.917 1.255-3.154 2.475-5.8 2.475-4.14 0-7.023-2.713-7.023-6.784l.002.001Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M108.994 17.558c0-5.834 3.493-9.667 8.751-9.667 2.374 0 4.579.916 5.766 2.34V2.94h5.258v24.014h-5.258v-2.07c-1.187 1.426-3.426 2.341-5.766 2.341-5.258 0-8.751-3.832-8.751-9.667v.001Zm14.517 0c0-3.12-1.899-5.223-4.613-5.223-2.714 0-4.647 2.103-4.647 5.223 0 3.12 1.899 5.19 4.647 5.19s4.613-2.07 4.613-5.19Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M130.608 3.244c0-1.764 1.357-3.019 3.121-3.019s3.121 1.256 3.121 3.019c0 1.763-1.323 3.018-3.121 3.018s-3.121-1.288-3.121-3.018Zm.475 4.918h5.223v18.791h-5.223V8.163Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M137.681 17.558c0-5.665 4.172-9.667 9.938-9.667 5.766 0 9.938 4.002 9.938 9.667s-4.172 9.667-9.938 9.667c-5.766 0-9.938-4.002-9.938-9.667Zm14.551 0c0-3.12-1.899-5.223-4.613-5.223-2.713 0-4.613 2.103-4.613 5.223 0 3.12 1.866 5.19 4.613 5.19 2.748 0 4.613-2.07 4.613-5.19Z"
+                ></path>
+              </g></svg
+          ></a>
+          <nav class="navigation">
+            <ul class="cluster" role="list">
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#studio">Studio</a></li>
+              <li><a href="/#get-in-touch">Get in touch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main tabindex="-1" id="main-content">
+      <div class="hero-region region">
+        <div class="wrapper flow">
+          <h1>
+            Move <em>fast</em>. <strong>(without breaking things)</strong>
+          </h1>
+          <ul class="hero-region__projects" role="list">
+            <li>
+              <div
+                class="project-card"
+                data-project-card-variant="top-right"
+                data-js="project-card"
+              >
+                <picture
+                  ><img
+                    src="https://set-studio.imgix.net/images/project-sbl.jpg"
+                    srcset="
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=100   100w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=116   116w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=134   134w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=156   156w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=182   182w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=210   210w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=244   244w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=282   282w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=328   328w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=380   380w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=442   442w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=512   512w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=594   594w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=688   688w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=798   798w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=926   926w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=1074 1074w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=1246 1246w,
+                      https://set-studio.imgix.net/images/project-sbl.jpg?w=1446 1446w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="426"
+                    height="426"
+                    alt="A music learning platform interface titled “Players Path” with a progress tracker for Level 03. It shows 2 of 3 study pieces completed, with a progress bar and buttons to view Level 03 or resume. A photo of a bass player is featured."
+                    loading="eager"
+                    fetchpriority="high"
+                /></picture>
+              </div>
+            </li>
+            <li>
+              <div
+                class="project-card"
+                data-project-card-variant="top-left"
+                data-js="project-card"
+              >
+                <picture
+                  ><img
+                    src="https://set-studio.imgix.net/images/project-jct.jpg"
+                    srcset="
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=100   100w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=116   116w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=134   134w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=156   156w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=182   182w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=210   210w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=244   244w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=282   282w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=328   328w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=380   380w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=442   442w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=512   512w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=594   594w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=688   688w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=798   798w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=926   926w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=1074 1074w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=1246 1246w,
+                      https://set-studio.imgix.net/images/project-jct.jpg?w=1446 1446w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="426"
+                    height="426"
+                    alt="A portfolio website homepage featuring large, colourful 3D text spelling “Hello”. Below, a bio introduces Jamie Clarke as a designer of typefaces, logotypes, and illustrations. A portrait of Jamie smiling is included."
+                    loading="eager"
+                    fetchpriority="high"
+                /></picture>
+              </div>
+            </li>
+            <li>
+              <div
+                class="project-card"
+                data-project-card-variant="bottom-right"
+                data-js="project-card"
+              >
+                <picture
+                  ><img
+                    src="https://set-studio.imgix.net/images/project-hf.jpg"
+                    srcset="
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=100   100w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=116   116w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=134   134w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=156   156w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=182   182w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=210   210w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=244   244w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=282   282w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=328   328w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=380   380w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=442   442w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=512   512w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=594   594w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=688   688w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=798   798w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=926   926w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=1074 1074w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=1246 1246w,
+                      https://set-studio.imgix.net/images/project-hf.jpg?w=1446 1446w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="426"
+                    height="426"
+                    alt="A modern, minimal website for “A Human Future”, a software development studio. Bold black text with green highlights introduces the company. A stylised image of a person with a green overlay appears below, alongside a description of their remote-first approach."
+                    loading="eager"
+                    fetchpriority="high"
+                /></picture>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="intro" class="intro-region">
+        <div class="wrapper">
+          <div class="intro-region__container sidebar">
+            <picture
+              ><img
+                src="/images/intro-arrows.svg"
+                sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                width="390"
+                height="390"
+                alt=""
+                loading="eager"
+                class="intro-region__media"
+            /></picture>
+            <div class="intro-region__body flow">
+              <div class="intro-region__heading">
+                <h2>
+                  Design partners for brands that <em>adapt fast</em> and
+                  <em>thrive</em>.
+                </h2>
+              </div>
+              <p>
+                No matter the industry or sector, the brands that thrive are no
+                longer the biggest, but those that are the swiftest to adapt.
+                Our iterative design approach helps you move fast and stay
+                ahead, with smaller, smarter investments in design that reduce
+                risk and keep the focus on what’s driving the greatest impact.
+              </p>
+              <p>
+                We’re a small team at the top of their game, partnering
+                strategically with you to help you level up and build a brand
+                that’s ready to thrive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="benefits" class="features-region region">
+        <div class="wrapper flow">
+          <div class="eyebrow"><h2>Why work with us</h2></div>
+          <div class="grid" data-layout="thirds">
+            <div class="features-region__col">
+              <h3 class="features-region__heading">
+                Invest smart and strategically
+              </h3>
+              <div class="flow">
+                <p>
+                  We cut through the noise and calculate what will make an
+                  impact for you. Our primary focus is efficiency and minimising
+                  waste with our sprint-based, low risk, iterative process.
+                  There’s no long-winded moonshots here, just a tangible return
+                  on investment that a traditional agency couldn’t dream of
+                  delivering.
+                </p>
+              </div>
+            </div>
+            <div class="features-region__col">
+              <h3 class="features-region__heading">Adapt or get left behind</h3>
+              <div class="flow">
+                <p>
+                  We won’t let you chase and mimic your competitors because
+                  you’ll be too busy blowing them out of the water. Market
+                  leaders adapt as a competitive edge and that’s exactly where
+                  we’ll position you, without compromising on quality.
+                </p>
+              </div>
+            </div>
+            <div class="features-region__col">
+              <h3 class="features-region__heading">
+                Trust us to deliver the goods
+              </h3>
+              <div class="flow">
+                <p>
+                  We take complete control of projects because we know it’s not
+                  your day-to-day focus. We become an extension of your team,
+                  bringing decades of experience close to where it matters to
+                  help you race past your competitors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="work" class="work-region region">
+        <div class="wrapper">
+          <div class="eyebrow"><h2>Selected partner success stories</h2></div>
+          <div class="breakout">
+            <ul
+              class="work-region__grid overflow"
+              role="list"
+              data-scroll="snap"
+              tabindex="0"
+              aria-label="Projects Overview"
+              style="--count: 8"
+            >
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Helped grow a 6 figure a year revenue business to an 8
+                        figure a year business</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-sbl.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-sbl.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the “Scott’s Bass Lessons” website, highlighting the “Players Path” feature. It includes a progress tracker, skill levels from beginner to advanced, and a sidebar with the brand logo and name."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client"
+                      >Scott’s Bass Lessons</strong
+                    >
+                    <span
+                      >UI design, design system, conversion optimisation</span
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Delivered a design system that enabled developers to
+                        design without creative support</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-web-dev.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-web-dev.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the “web.dev” website by Google, showcasing its design system, web vitals insights, code examples, and accessibility guidelines. The layout features a dark theme with a modern interface."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">Google</strong>
+                    <span>Design system, platform roll-out</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Reduced cost per conversions by over 70% with a
+                        focused, themeable system</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-tle.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-tle.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from “The Lost Estate” website, featuring bold typography, vintage-inspired illustrations, event details, customer reviews, and booking buttons. The design uses a dark theme with red and gold accents."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">The Lost Estate</strong>
+                    <span
+                      >Highly themeable system, conversion optimisation, brand
+                      refinement</span
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Developed a design language and marketing overhaul to
+                        achieve a 7x increase in paid members</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-oceg.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-oceg.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the OCEG website, featuring bold typography, certification cards, and a structured career pathway for becoming a GRC professional. The design uses a striking red colour scheme with modern layouts."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">OCEG</strong>
+                    <span
+                      >Design system, marketing site redesign, asset creation,
+                      UX optimisation</span
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Produced a complete refocus from respected finance blog
+                        to trusted investment partners</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-capitalmind.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-capitalmind.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the “Capitalmind” website, featuring its bold logo, wealth-building tagline, subscription pricing, a podcast player, and navigation links. The design uses a modern layout with a green and purple colour scheme."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">Capitalmind</strong>
+                    <span>UI design, consultancy</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Transformed a respected tech blog to an ambitious,
+                        profitable publisher</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-piccalilli.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-piccalilli.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the “Piccalilli” website, showcasing its brand identity. The design features bold typography, a black and yellow colour scheme, and highlights from the site, including articles, courses, and a front-end education tagline."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">Piccalilli</strong>
+                    <span
+                      >brand strategy, UI design, visual identity, design
+                      system</span
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Enabled a legendary designer to take back control of
+                        their font sales, increasing profits</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-jct.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-jct.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from Jamie Clarke’s website, featuring bold 3D text spelling “About,” a biography section, and images of Jamie working. The design highlights his expertise in type design and lettering."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">Jamie Clarke Type</strong>
+                    <span>UI design, front-end development</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="work-card">
+                  <div class="work-card__impact">
+                    <p class="work-card__statement">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#plus"></use>
+                      </svg>
+                      <span
+                        >Refined a leading agency’s brand to enable solid growth
+                        and more profitable engagements</span
+                      >
+                    </p>
+                    <picture
+                      ><img
+                        src="https://set-studio.imgix.net/images/work-tl.jpg"
+                        srcset="
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=100   100w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=116   116w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=134   134w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=156   156w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=182   182w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=210   210w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=244   244w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=282   282w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=328   328w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=380   380w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=442   442w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=512   512w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=594   594w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=688   688w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=798   798w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=926   926w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=1074 1074w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=1246 1246w,
+                          https://set-studio.imgix.net/images/work-tl.jpg?w=1446 1446w
+                        "
+                        sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                        width="1760"
+                        height="1600"
+                        alt="A composition of selected elements from the “TetraLogical” website, featuring a bold purple and pink theme, accessibility-focused testimonials, UI components like buttons and accordions, and a structured colour palette representing inclusivity and sustainability."
+                        loading="lazy"
+                        class="work-card__media"
+                    /></picture>
+                  </div>
+                  <figcaption class="work-card__meta">
+                    <strong class="work-card__client">TetraLogical</strong>
+                    <span
+                      >UI Design, WCAG AAA compliant front-end development</span
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="studio" class="the-studio-region region">
+        <div class="wrapper flow">
+          <div class="eyebrow"><h2>Studio</h2></div>
+          <div class="switcher">
+            <h3 class="the-studio-region__heading">
+              We’re small, but we pack a punch.
+            </h3>
+            <div>
+              <div class="the-studio-region__body flow">
+                <p>
+                  Set Studio is a UK-based, tight-knit group of creatives,
+                  strategists and technologists with plenty of bite that adapt
+                  to excel, no matter what we’re faced with, thanks to our
+                  iterative approach to design partnership.
+                </p>
+                <p>
+                  You get honesty, pragmatism and a team that want nothing more
+                  than to deliver excellence at all points, who will swim
+                  against the tide to get there. With a combined industry
+                  experience at the highest level of over 50 years, you couldn’t
+                  be in better hands.
+                </p>
+              </div>
+              <ul class="team" role="list">
+                <li>
+                  <div class="team-card">
+                    <div>
+                      <picture
+                        ><img
+                          src="https://set-studio.imgix.net/images/andy-bell.jpg"
+                          srcset="
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=100   100w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=116   116w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=134   134w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=156   156w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=182   182w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=210   210w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=244   244w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=282   282w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=328   328w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=380   380w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=442   442w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=512   512w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=594   594w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=688   688w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=798   798w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=926   926w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=1074 1074w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=1246 1246w,
+                            https://set-studio.imgix.net/images/andy-bell.jpg?w=1446 1446w
+                          "
+                          sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                          width="600"
+                          height="600"
+                          alt="Andy Bell&#x27;s profile picture"
+                          loading="lazy"
+                          class="team-card__media"
+                      /></picture>
+                    </div>
+                    <div class="team-card__body flow">
+                      <h3 class="team-card__name">Andy Bell</h3>
+                      <p class="team-card__role">Founder</p>
+                      <p class="team-card__bio">
+                        Ruthlessly pragmatic strategist and educator
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="team-card">
+                    <div>
+                      <picture
+                        ><img
+                          src="https://set-studio.imgix.net/images/leanne-renard.jpg"
+                          srcset="
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=100   100w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=116   116w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=134   134w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=156   156w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=182   182w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=210   210w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=244   244w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=282   282w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=328   328w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=380   380w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=442   442w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=512   512w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=594   594w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=688   688w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=798   798w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=926   926w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=1074 1074w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=1246 1246w,
+                            https://set-studio.imgix.net/images/leanne-renard.jpg?w=1446 1446w
+                          "
+                          sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                          width="600"
+                          height="600"
+                          alt="Leanne Renard&#x27;s profile picture"
+                          loading="lazy"
+                          class="team-card__media"
+                      /></picture>
+                    </div>
+                    <div class="team-card__body flow">
+                      <h3 class="team-card__name">Leanne Renard</h3>
+                      <p class="team-card__role">Tech Lead</p>
+                      <p class="team-card__bio">
+                        Systems obsessed, web standards specialist
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="team-card">
+                    <div>
+                      <picture
+                        ><img
+                          src="https://set-studio.imgix.net/images/jason-bradberry.jpg"
+                          srcset="
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=100   100w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=116   116w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=134   134w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=156   156w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=182   182w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=210   210w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=244   244w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=282   282w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=328   328w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=380   380w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=442   442w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=512   512w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=594   594w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=688   688w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=798   798w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=926   926w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=1074 1074w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=1246 1246w,
+                            https://set-studio.imgix.net/images/jason-bradberry.jpg?w=1446 1446w
+                          "
+                          sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                          width="600"
+                          height="600"
+                          alt="Jason Bradberry&#x27;s profile picture"
+                          loading="lazy"
+                          class="team-card__media"
+                      /></picture>
+                    </div>
+                    <div class="team-card__body flow">
+                      <h3 class="team-card__name">Jason Bradberry</h3>
+                      <p class="team-card__role">Design Lead</p>
+                      <p class="team-card__bio">
+                        Mind-blowingly creative, typography aficionado
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="team-card">
+                    <div>
+                      <picture
+                        ><img
+                          src="https://set-studio.imgix.net/images/vicky-morris.jpg"
+                          srcset="
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=100   100w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=116   116w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=134   134w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=156   156w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=182   182w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=210   210w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=244   244w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=282   282w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=328   328w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=380   380w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=442   442w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=512   512w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=594   594w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=688   688w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=798   798w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=926   926w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=1074 1074w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=1246 1246w,
+                            https://set-studio.imgix.net/images/vicky-morris.jpg?w=1446 1446w
+                          "
+                          sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                          width="600"
+                          height="600"
+                          alt="Vicky Morris&#x27;s profile picture"
+                          loading="lazy"
+                          class="team-card__media"
+                      /></picture>
+                    </div>
+                    <div class="team-card__body flow">
+                      <h3 class="team-card__name">Vicky Morris</h3>
+                      <p class="team-card__role">Producer</p>
+                      <p class="team-card__bio">
+                        Talented data analyst, strategist and friendly organiser
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="team-card" data-team-card-variant="stretch">
+                    <div>
+                      <picture
+                        ><img
+                          src="/images/the-network.svg"
+                          sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                          width="178"
+                          height="178"
+                          alt="Various black and red squares distributed in an organised fashion"
+                          loading="lazy"
+                          draggable="false"
+                          class="team-card__media"
+                      /></picture>
+                    </div>
+                    <div class="team-card__body flow">
+                      <h3 class="team-card__name">The Network</h3>
+                      <p class="team-card__bio">
+                        Trusted, talented and verified independents that fit
+                        like a glove in the studio
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="what-we-do" class="features-region region">
+        <div class="wrapper flow">
+          <div class="eyebrow"><h2>What we do</h2></div>
+          <div class="grid" data-layout="thirds">
+            <div class="features-region__col">
+              <h3 class="features-region__heading">Design</h3>
+              <div class="flow">
+                <ul>
+                  <li>Branding</li>
+                  <li>User experience design</li>
+                  <li>Conversion optimisation</li>
+                  <li>Design systems</li>
+                  <li>Design that makes your eyes smile</li>
+                </ul>
+              </div>
+            </div>
+            <div class="features-region__col">
+              <h3 class="features-region__heading">Technology</h3>
+              <div class="flow">
+                <ul>
+                  <li>
+                    Inclusive, high performing user interfaces that work for
+                    everyone
+                  </li>
+                  <li>Flexible layout systems</li>
+                  <li>Web standards that work anywhere</li>
+                  <li>Front-end architecture</li>
+                  <li>User interfaces that adapt to any situation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="features-region__col">
+              <h3 class="features-region__heading">Strategy</h3>
+              <div class="flow">
+                <ul>
+                  <li>Roadmaps</li>
+                  <li>Campaigns</li>
+                  <li>Content design</li>
+                  <li>Design and code reviews</li>
+                  <li>Consultation and education</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="experience" class="experience-region region">
+        <div class="wrapper">
+          <div class="eyebrow"><h2>Experience</h2></div>
+          <p class="visually-hidden">
+            Over 50 years of combined, elite level experience
+          </p>
+          <div
+            class="experience-region__stacked-cards"
+            data-js="stacked-cards"
+            style="--count: 5"
+          >
+            <div
+              class="stacked-card"
+              aria-hidden="true"
+              data-stacked-card-variant="placeholder"
+              data-stacked-card-index="0"
+            >
+              <span>+10</span>
+            </div>
+            <div
+              class="stacked-card"
+              aria-hidden="true"
+              data-stacked-card-variant="placeholder"
+              data-stacked-card-index="1"
+            >
+              <span>+10</span>
+            </div>
+            <div
+              class="stacked-card"
+              aria-hidden="true"
+              data-stacked-card-variant="placeholder"
+              data-stacked-card-index="2"
+            >
+              <span>+10</span>
+            </div>
+            <div
+              class="stacked-card"
+              aria-hidden="true"
+              data-stacked-card-variant="placeholder"
+              data-stacked-card-index="3"
+            >
+              <span>+10</span>
+            </div>
+            <div class="stacked-card" data-stacked-card-index="4">
+              <span>+10</span>
+              <h3 class="stacked-card__heading">
+                Over 50 years of combined, elite level experience
+              </h3>
+            </div>
+          </div>
+          <div class="experience-region__body flow">
+            <h3>We’ve been there and seen it all</h3>
+            <p>
+              In their long, successful careers, our team have worked with some
+              of the largest, well-known brands and organisations. They’ve also
+              helped smaller organisations and startups explode in growth —
+              completely transforming them from root to branch.
+            </p>
+          </div>
+          <div class="logo-grid">
+            <ul class="logo-grid__list" role="list">
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-nhm.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="121"
+                    height="57"
+                    alt="Natural History Museum"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-google.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="139"
+                    height="47"
+                    alt="Google"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-harley.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="100"
+                    height="77"
+                    alt="Harley-Davidson"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-nhs.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="115"
+                    height="43"
+                    alt="NHS"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-sky.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="101"
+                    height="61"
+                    alt="Sky"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-vice.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="151"
+                    height="49"
+                    alt="VICE"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-sbl.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="76"
+                    height="75"
+                    alt="Scott’s Bass Lessons"
+                    loading="lazy"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><img
+                    src="/images/logo-oracle.svg"
+                    sizes="(max-width: 480px) 70vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, (max-width: 1440px) 50vw, 40vw"
+                    width="156"
+                    height="23"
+                    alt="Oracle"
+                    loading="lazy"
+                /></picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="partner-feedback" class="testimonials-region region">
+        <div class="wrapper flow">
+          <div class="eyebrow"><h2>Partner feedback</h2></div>
+          <div class="breakout">
+            <ul
+              class="reel"
+              role="list"
+              data-scroll="snap"
+              tabindex="0"
+              aria-label="Testimonials"
+            >
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >We started working with Set on a small design system for
+                    our resource centre. This allowed us to rapidly iterate and
+                    eventually expand to a whole-site redesign with their help.
+                    We&#x27;ve built up a really good, ongoing relationship with
+                    Set because of the success of this iterative approach, and
+                    continue to further improve OCEG with them as our design
+                    strategy partners.</q
+                  >
+                  <footer class="cluster">
+                    <span>Scott Mitchell</span>
+                    <small>Founder &amp; CEO, OCEG</small>
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >I have identified your superpower. Your ability to strike a
+                    balance between giving us what we wanted and not including
+                    elements that you believed wouldn’t add value to our brand
+                    was truly commendable.</q
+                  >
+                  <footer class="cluster">
+                    <span>Akanksha Maulik</span>
+                    <small>Director, Capitalmind</small>
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >Working with Set has revolutionised our approach to
+                    launching our digital brands. Their solutions have enabled
+                    us to deploy new websites faster than ever before,
+                    completely transforming our paid digital testing processes.
+                    Thanks to Set, we&#x27;re empowered to test, iterate, and
+                    refine rapidly, all without needing external developers.
+                    They’re more than just a design and development team;
+                    they’re essential partners in our digital growth.</q
+                  >
+                  <footer class="cluster">
+                    <span>Will Kunhardt</span>
+                    <small>Co-founder, The Lost Estate</small>
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >I worked with Set on a creative technology build that
+                    really set out to do something bold and ambitious from a
+                    design perspective. The Set team delivered a result I was
+                    thrilled with – outstanding quality to time and budget and a
+                    frictionless workflow. Unreservedly recommend Set and
+                    already looking forward to working together again.</q
+                  >
+                  <footer class="cluster">
+                    <span>Tom Rhumbold</span>
+                    <small>Founder, A Human Future</small>
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >web.dev wouldn&#x27;t be what it is today without Set’s
+                    direction. The major redesign, with the new design and
+                    component systems they shipped have set our team up for the
+                    future.</q
+                  >
+                  <footer class="cluster">
+                    <span>Paul Kinlan</span>
+                    <small
+                      >Lead for Web &amp; Chrome Developer Relations,
+                      Google</small
+                    >
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >Set Studio have been fantastic. They’ve created a
+                    world-class website while helping me refine how I present my
+                    business to clients and customers. Their expertise
+                    navigating the challenges of my e-commerce platform has been
+                    invaluable. I couldn’t be happier with the outcome.</q
+                  >
+                  <footer class="cluster">
+                    <span>Jamie Clarke</span>
+                    <small>Founder of Jamie Clarke Type</small>
+                  </footer>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote class="quote">
+                  <q
+                    >For our website redesign, Set Studio was the only choice.
+                    Their deep understanding of inclusive design ensured
+                    accessibility was seamlessly integrated into bold, vibrant
+                    visuals and animations. With a content-first, iterative
+                    approach, they kept everything on track, making the entire
+                    process a delight.</q
+                  >
+                  <footer class="cluster">
+                    <span>Henny Swan</span>
+                    <small>Director at Tetralogical</small>
+                  </footer>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="approach" class="approach-region region">
+        <div class="wrapper">
+          <div class="eyebrow"><h2>Approach</h2></div>
+          <div class="approach-region__container sidebar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="arrow"
+              width="675"
+              height="704"
+              aria-hidden="true"
+              focusable="false"
+              fill="none"
+              viewBox="0 0 675 704"
+              data-js="arrow"
+            >
+              <path
+                class="pixel-one"
+                fill="var(--color-dark)"
+                d="M135.001 164v135H0V164z"
+              ></path>
+              <path
+                class="pixel-two"
+                fill="var(--color-dark)"
+                d="m297.964 501.5-95.46 95.46-95.46-95.46 95.46-95.46z"
+              ></path>
+              <path
+                class="pixel-three"
+                fill="var(--color-dark)"
+                d="m432.955 95.5-95.46 95.46-95.46-95.46L337.496.04z"
+              ></path>
+              <path
+                class="pixel-four"
+                fill="var(--color-dark)"
+                d="M404.996 299v135H269.995V299z"
+              ></path>
+              <path
+                class="pixel-five"
+                fill="var(--color-dark)"
+                d="M404.996 569v135H269.995V569z"
+              ></path>
+              <path
+                class="pixel-six"
+                fill="var(--color-dark)"
+                d="M540 164v135H404.999V164z"
+              ></path>
+              <path
+                class="pixel-seven"
+                fill="var(--color-primary)"
+                d="M540 299v135H404.999V299z"
+              ></path>
+              <path
+                class="pixel-eight"
+                fill="var(--color-dark)"
+                d="M675 434v135H539.999V434z"
+              ></path>
+            </svg>
+            <div class="approach-region__body flow">
+              <h3 class="approach-region__heading">
+                It’s all about taking ideas and refining them into something
+                excellent.
+              </h3>
+              <div class="flow">
+                <p>
+                  Iteration is at the core of everything we do. Instead of
+                  long-winded, traditional and over-priced waterfall projects
+                  that a traditional agency offers, we tackle your problems with
+                  transparently-priced, two week sprints.
+                </p>
+                <p>
+                  Working in iterative sprints gets you where you need to be
+                  faster with less risk and more efficient returns on your
+                  investment. We work with you exclusively, giving you access to
+                  our elite team — not a subset that a larger traditional agency
+                  typically offers, making us a valued investment, not an
+                  expense item.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="points-of-difference" class="points-of-difference-region region">
+        <div class="wrapper">
+          <div class="overflow">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Set Studio</th>
+                  <th scope="col">Traditional Agency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>Full studio focus on your project</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>
+                        A small subset of the team working on your project,
+                        along with multiple other projects
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>Senior level staff working on your project</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>
+                        Less senior and junior members working on your project
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>Fair pricing with lower overheads</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>
+                        Lots of expensive overheads, resulting in inflated
+                        prices
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>
+                        We take complete charge, allowing you to do your day job
+                        in peace
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>
+                        Frequent requests for sign-off, approval, meetings and
+                        content
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>
+                        Direct contact with recognised experts in design and
+                        technology
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>
+                        Access to an account manager who relays information
+                        between client and agency
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#skittle"></use>
+                      </svg>
+                      <p>Iterative, efficient process</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="points-of-difference-region__explainer">
+                      <svg
+                        class="icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 16 16"
+                      >
+                        <use href="#cross"></use>
+                      </svg>
+                      <p>Long-winded traditional waterfall process</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="get-in-touch" class="call-to-action region">
+        <div class="wrapper flow">
+          <div class="eyebrow"><h2>Get in touch</h2></div>
+          <div class="call-to-action__container">
+            <h3 class="call-to-action__heading">Ready, set, go</h3>
+            <div class="call-to-action__body flow">
+              <p>
+                We already know we’re going to be the right fit for you, so
+                reach out and let us prove it. Let’s get to work blowing your
+                competition out of the water.
+              </p>
+              <div class="cluster">
+                <a
+                  href="https://calendar.notion.so/meet/andybell/4t1is4lfn"
+                  class="button"
+                  rel="noopener"
+                  target="_blank"
+                  data-button-variant="primary"
+                  >Schedule a call</a
+                ><a href="/contact-us/" class="button">Get in touch</a>
+              </div>
+              <div class="call-to-action__footnote">
+                <p>
+                  Prefer to email? Drop us a line at
+                  <code>enquiries@set.studio</code>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script defer src="/scripts/gsap.min.js"></script>
+      <script type="module">
+        function initAnimations() {
+          const approachElement = document.querySelector('[data-js="arrow"]');
+          const stackedCardsElement = document.querySelector(
+            '[data-js="stacked-cards"]'
+          );
+          const projectCards = document.querySelectorAll(
+            '[data-js="project-card"]'
+          );
+
+          if (
+            !approachElement &&
+            !stackedCardsElement &&
+            projectCards.length === 0
+          )
+            return;
+
+          const gsap = window.gsap;
+
+          if (approachElement) {
+            import('/scripts/arrow.js').then(({ arrow }) =>
+              arrow(approachElement)
+            );
+          }
+
+          if (stackedCardsElement) {
+            import('/scripts/stackedCards.js').then(({ stackedCards }) =>
+              stackedCards(stackedCardsElement)
+            );
+          }
+
+          if (projectCards.length > 0) {
+            import('/scripts/projectCard.js').then(({ projectCard }) => {
+              projectCards.forEach((card) => projectCard(card));
+            });
+          }
+        }
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(initAnimations);
+        });
+      </script>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <hr />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 158 28"
+          role="img"
+          aria-label="Set.Studio"
+          focusable="false"
+          class="set-studio-logo"
+        >
+          <g class="set-studio-logo__set">
+            <path
+              fill="currentColor"
+              d="M0 18.61h5.257c.136 2.443 1.9 4.036 4.376 4.036 2.069 0 3.46-.882 3.46-2.544 0-4.002-10.753-2.17-10.753-9.701 0-4.545 3.867-7.462 9.023-7.462 5.528 0 8.14 3.222 8.411 7.462h-5.223c-.305-1.797-1.662-2.883-3.663-2.883-1.764 0-3.154.814-3.154 2.17 0 3.562 10.82 1.662 10.82 9.566 0 4.783-3.663 7.971-9.226 7.971-6.004 0-9.294-4.003-9.328-8.615Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M19.72 18.677c0-6.24 4.58-10.786 10.956-10.786 6.885 0 9.328 5.19 7.666 10.888h-13.5c.17 2.579 1.696 4.105 4.172 4.105 1.797 0 3.154-.848 3.63-2.137h5.291c-1.017 3.698-4.274 6.48-9.429 6.48-5.461 0-8.785-3.223-8.785-8.549Zm13.738-3.663c.17-1.934-1.018-3.154-3.223-3.154-2.204 0-3.866 1.323-4.68 3.154h7.903Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="m40.694 20.848 1.357-8.446h-2.645l.678-4.24h2.645l.61-3.9h5.258l-.61 3.9h3.832l-.678 4.24h-3.833l-1.255 7.971c-.271 1.492.44 2.34 1.797 2.34.577 0 1.357-.135 1.967-.339l-.712 4.376c-.848.305-1.696.474-2.952.474-3.527 0-6.105-2.306-5.461-6.376h.002Z"
+            ></path>
+          </g>
+          <g class="set-studio-logo__dot">
+            <path
+              fill="currentColor"
+              d="M50.964 24.207c0-1.73 1.322-2.985 3.052-2.985s3.019 1.256 3.019 2.985c0 1.729-1.323 2.984-3.019 2.984-1.696 0-3.052-1.255-3.052-2.984Z"
+            ></path>
+          </g>
+          <g class="set-studio-logo__studio">
+            <path
+              fill="currentColor"
+              d="M56.918 18.61h5.224c.339 2.51 1.934 4.036 4.68 4.036 1.866 0 3.324-.78 3.324-2.544 0-4.138-12.211-1.56-12.211-10.244 0-4.138 3.8-6.92 8.378-6.92 5.258 0 8.514 2.68 9.057 7.463h-5.223c-.34-1.764-1.934-2.883-3.935-2.883-1.764 0-2.917.814-2.917 2.07 0 3.764 12.245.983 12.245 10.175 0 4.715-3.8 7.462-8.718 7.462-5.835 0-9.463-3.323-9.905-8.615h.001Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M78.875 20.78v-8.378H76.23v-4.24h2.645v-3.9h5.258v3.9h3.832v4.24h-3.832v7.87c0 1.56.848 2.442 2.205 2.442.577 0 1.288-.135 1.865-.339v4.376a7.213 7.213 0 0 1-2.645.474c-3.8 0-6.683-2.306-6.683-6.444Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M89.784 20.441V8.162h5.257v10.923c0 2.103 1.323 3.527 3.358 3.527 2.578 0 4.206-2.136 4.206-6.14v-8.31h5.257v18.791h-5.257V24.75c-.917 1.255-3.154 2.475-5.8 2.475-4.14 0-7.023-2.713-7.023-6.784l.002.001Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M108.994 17.558c0-5.834 3.493-9.667 8.751-9.667 2.374 0 4.579.916 5.766 2.34V2.94h5.258v24.014h-5.258v-2.07c-1.187 1.426-3.426 2.341-5.766 2.341-5.258 0-8.751-3.832-8.751-9.667v.001Zm14.517 0c0-3.12-1.899-5.223-4.613-5.223-2.714 0-4.647 2.103-4.647 5.223 0 3.12 1.899 5.19 4.647 5.19s4.613-2.07 4.613-5.19Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M130.608 3.244c0-1.764 1.357-3.019 3.121-3.019s3.121 1.256 3.121 3.019c0 1.763-1.323 3.018-3.121 3.018s-3.121-1.288-3.121-3.018Zm.475 4.918h5.223v18.791h-5.223V8.163Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M137.681 17.558c0-5.665 4.172-9.667 9.938-9.667 5.766 0 9.938 4.002 9.938 9.667s-4.172 9.667-9.938 9.667c-5.766 0-9.938-4.002-9.938-9.667Zm14.551 0c0-3.12-1.899-5.223-4.613-5.223-2.713 0-4.613 2.103-4.613 5.223 0 3.12 1.866 5.19 4.613 5.19 2.748 0 4.613-2.07 4.613-5.19Z"
+            ></path>
+          </g>
+        </svg>
+        <div class="switcher footer__company">
+          <h2>
+            Design partners for brands that <em>adapt fast</em> and
+            <em>thrive</em>.
+          </h2>
+          <p><code>enquiries@set.studio</code></p>
+        </div>
+        <div class="switcher">
+          <div class="socials">
+            <ul class="cluster" role="list">
+              <li>
+                <a href="https://bsky.app/profile/set.studio/">Bluesky</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/set-studio-ltd/"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <small
+            >Set Creative Studio Ltd is registered in the UK. Our company number
+            is 11703292 and our VAT number is GB336793957. Our registered
+            address is 3 Bath Mews, Bath Parade, Cheltenham, Gloucestershire,
+            United Kingdom, GL53 7HL.</small
+          >
+        </div>
+      </div>
+    </footer>
+    <div hidden="">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol
+          id="plus"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <circle
+            cx="8"
+            cy="8"
+            r="7.4"
+            stroke="#2B2B2B"
+            stroke-width=".5"
+          ></circle>
+          <path
+            d="M9.98 7.5h1.26v1.26H9.98zM7.46 7.5h1.26v1.26H7.46zM7.46 4.98h1.26v1.26H7.46zM4.93 7.5h1.26v1.26H4.93zM7.46 10.03h1.26v1.26H7.46z"
+            fill="#2B2B2B"
+          ></path>
+        </symbol>
+        <symbol
+          id="cross"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <circle cx="8" cy="8" r="7.9" fill="#D4D1CD"></circle>
+          <path
+            d="M8.72 6.24h1.26V7.5H8.72zM9.98 4.97h1.26v1.26H9.98zM7.46 7.5h1.26v1.26H7.46zM6.19 6.24h1.26V7.5H6.19zM4.93 4.97h1.26v1.26H4.93zM6.19 8.77h1.26v1.26H6.19zM4.93 10.03h1.26v1.26H4.93zM8.72 8.77h1.26v1.26H8.72zM9.98 10.03h1.26v1.26H9.98z"
+            fill="#2B2B2B"
+          ></path>
+        </symbol>
+        <symbol
+          id="skittle"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <circle cx="8" cy="8" r="7.9" fill="#E01616"></circle>
+          <path
+            d="M7.64 12.31c-.71 0-1.31-.14-1.81-.42-.49-.28-.86-.65-1.12-1.12-.25-.47-.38-.97-.38-1.52H6.2c.02.43.18.78.46 1.05.29.26.65.39 1.1.39.37 0 .67-.08.89-.23.22-.15.34-.38.34-.67 0-.24-.09-.43-.28-.57-.2-.15-.43-.27-.72-.37-.29-.1-.6-.21-.93-.33-.32-.1-.63-.24-.91-.41-.29-.18-.53-.41-.72-.69-.18-.28-.27-.64-.27-1.08 0-.54.14-1 .42-1.4.28-.4.66-.71 1.14-.93.48-.21 1.03-.32 1.64-.32.66 0 1.2.12 1.63.35.43.23.76.55.98.95.22.39.35.84.39 1.35H9.49c-.06-.32-.2-.57-.43-.75-.22-.18-.51-.28-.87-.28-.31 0-.58.07-.8.2-.21.15-.32.33-.32.57 0 .21.09.38.28.51.18.12.42.23.71.31.3.09.61.19.93.3.33.1.64.25.93.42.3.18.54.41.72.71.18.3.28.68.28 1.14 0 .56-.14 1.06-.41 1.48-.27.43-.65.76-1.14 1-.5.25-1.07.36-1.73.36z"
+            fill="#fefbf6"
+          ></path>
+        </symbol>
+      </svg>
+    </div>
+    <script
+      defer
+      src="https://cdn.usefathom.com/script.js"
+      data-site="JEYOHSCB"
+    ></script>
+  </body>
+</html>

@@ -72,7 +72,7 @@ Dev Server, Build Tool, File/Folder Structure, [HTML Boilerplate](https://github
 - Separation of Concerns
 - Documentation
 - Design System/Atomic Design
-- BEM Methodology
+- BEM/ABEM Methodology
 - [CSS Reset](https://github.com/tojeiro-me/Plasttic-reset)
 - [HTML Boilerplate](https://github.com/tojeiro-me/Plasttic-boilerplate)
 - Semantic HTML/Accessibility

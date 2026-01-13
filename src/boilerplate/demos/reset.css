@@ -1,0 +1,162 @@
+/* Plasttic v2.0 | MIT License | https://plasttic.dev/ */
+
+/**
+  * 00_reset.css
+  *
+  * Styling for CSS browser compatibility
+  * and best practices styling defaults
+  *
+  * Based on A Modern CSS Reset by Andy Bell @piccalilli_
+  * https://piccalil.li/blog/a-modern-css-reset/
+  * and includes some rules from Josh Comeau @JoshWComeau
+  * https://www.joshwcomeau.com/css/custom-css-reset/
+  *
+  */
+
+/* Global */
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+* {
+  /* Remove default margin and padding globally */
+  margin: 0;
+  padding: 0;
+  /* Default styling for items with text decoration  */
+  text-decoration-thickness: 0.2ex;
+  text-underline-offset: 0.25ex;
+}
+:where(ul, ol):not([role="list"], [class]) {
+  padding-left: 1.75ex;
+  /* apply the role=list when styling with list-style=none */
+}
+
+/* Document */
+:where(html) {
+  /* Scroll preference */
+  scroll-behavior: smooth;
+}
+:where(html, body) {
+  /* Viewport height units (vh/svh/dvh/lvh) are set on the layout sections */
+  height: 100%;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+}
+
+/* Cursor */
+:where(a[href], area, button, summary, [tabindex]:not([tabindex*="-"])),
+:where(input, label[for], select, textarea),
+:where(input[type="file"])::-webkit-file-upload-button {
+  cursor: pointer;
+}
+:where(abbr) {
+  cursor: help;
+}
+
+/* Typography */
+:where(html) {
+  /* Avoid text inflation on mobile screens */
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+:where(body) {
+  font-family: system-ui, sans-serif;
+  text-rendering: optimizeSpeed;
+  /* Typography defaults for readability */
+  line-height: 1.45; /* 1.3 to 1.6: ideal line height depends on the font x-height */
+  letter-spacing: 0.012em;
+  word-spacing: 0.016em;
+}
+:where(h1, h2, h3) {
+  /* Prevent long lines */
+  max-width: 30ch;
+  /* Better spacing between content */
+  margin-bottom: 1.5em;
+  /* Bigger headings typography defaults for readability */
+  line-height: 1.1; /* 1 to 1.2: ideal line height depends on the font x-height */
+  letter-spacing: 0.012em;
+  word-spacing: 0.016em;
+}
+:where(h2, h3) {
+  /* Better spacing between content */
+  margin-top: 2.5em;
+}
+:where(h2) {
+  /* Prevent long lines */
+  max-width: 35ch;
+}
+:where(h3) {
+  /* Prevent long lines */
+  max-width: 45ch;
+}
+:where(h4, h5, h6, p) {
+  /* Prevent long lines for readability */
+  max-width: 65ch; /* Optimal values: 50ch to 80ch */
+}
+:where(h4, h5, h6, p + p) {
+  /* Better spacing between content */
+  margin-top: 1.5em;
+}
+:where(h1, h2, h3, h4, h5, h6, p) {
+  /* Text wrap */
+  overflow-wrap: break-word;
+  text-wrap: balance; /* May 2023: not yet supported */
+}
+
+/* Media */
+:where(img, picture, video, canvas, svg) {
+  /* Make images easier to work with */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+:where(img, video) {
+  /* Avoid distortion by filling the entire content box */
+  object-fit: cover;
+}
+:where(img, video, canvas, svg) {
+  /* Set aspect-ratio based on specified sizes */
+  aspect-ratio: attr(width) / attr(height); /* May 2023: not yet supported */
+}
+
+/* Forms */
+:where(button, input, label[for], select, textarea),
+:where(input[type="file"])::-webkit-file-upload-button {
+  /* Apply document default typography styles */
+  color: inherit;
+  font: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  padding: 0;
+}
+
+/* Focus style */
+:where(
+    a,
+    input,
+    button,
+    textarea,
+    select,
+    [tabindex]:not([tabindex*="-"])
+  ):focus-visible {
+  outline: 1px solid hsl(0 0% 100%);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px hsl(26 86% 61%);
+  border-radius: 1px;
+}
+
+/* Remove animations and transitions when motion preference set to reduce */
+@media (prefers-reduced-motion: reduce) {
+  :where(html) {
+    scroll-behavior: auto;
+  }
+  *,
+  :before,
+  :after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

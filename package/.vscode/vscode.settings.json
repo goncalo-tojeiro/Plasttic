@@ -201,6 +201,15 @@
   ],
   "githubPullRequests.pullBranch": "never",
 
+  "jest.runMode": {
+    "type": "on-demand",
+    "deferred": true
+  },
+
+  "path-autocomplete.pathMappings": {
+    "/": "${folder}/src"
+  },
+
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.configPath": ".vscode/.prettierrc",
@@ -220,7 +229,7 @@
 
   "todo-tree.general.enableFileWatcher": true,
   "todo-tree.general.tagGroups": {},
-  "todo-tree.general.tags": ["TODO", "FIX", "CHECK", "DONE"],
+  "todo-tree.general.tags": ["TODO", "NOTE", "FIX", "CHECK", "DONE"],
   "todo-tree.general.statusBar": "current file",
   "todo-tree.highlights.backgroundColourScheme": [
     "red",
@@ -248,6 +257,14 @@
       "background": "white",
       "iconColour": "white",
       "gutterIcon": false
+    },
+    "NOTE": {
+      "icon": "check",
+      "type": "icon",
+      "foreground": "white",
+      "background": "green",
+      "iconColour": "green",
+      "gutterIcon": true
     },
     "FIX": {
       "icon": "check",

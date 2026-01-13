@@ -1,4 +1,4 @@
-# v3.0.0-alpha.1 (Mar --, 2024)
+# v3.0.0-alpha.1 (Jun --, 2024)
 
 - :warning: Updated: Replaced Sass style nesting with CSS native nesting
 - :warning: Updated: Replaced CSS individual imports with glob import
@@ -11,6 +11,16 @@
 - :warning: Updated: Browser Sync does not open new window
 - :warning: Updated: typescript@5.4.5
 - :warning: Updated: disabled Forcing https:// from .htaccess
+- :warning: Updated: Jest config in vscode.settings.json
+- :warning: Updated: Replaced Dependabot with Renovate for dependency updates Develop branch (maintain Dependabot for GitHub Actions on Main branch)
+- :warning: Removed: Dependabot Auto Merge
+- :warning: Updated: Added lock files to gitignore
+- :warning: Updated: Ignore Dependabot and Renovate branches in plasttic-ci.yml
+- :warning: Updated: Dependabot updates github-actions in main branch and added prefix 'main(workflow-actions)'
+- :warning: Updated: Eslint fixed version 8.57.0
+- :warning: Updated: Github Actions to use Node 20
+- :warning: Removed: private folder
+- :warning: Updated: postcss-nested to postcss-nesting
 
 ---
 

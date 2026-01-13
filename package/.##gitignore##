@@ -5,7 +5,6 @@
 # settings
 settings.json
 *.code-profile
-.vscode/
 
 # OS files
 **/.DS_Store
@@ -13,21 +12,25 @@ settings.json
 # dependencies
 node_modules/
 
-# private folders and files.
-.plasttic/
-.husky/
+# private folders and files
 certs/
 .env
 .cache
 
-# development folder
+# development folders
 dev/
-
-# project folders and files
-**/NOTES.md
+dist/
+lib/
 
 # ignore files adding -nogit
 *-nogit*
+
+# project folders and files
+archive/
+**/sources/
+**/NOTES.md
+**/boilerplate/
+*.tree
 
 # testing
 tests/**/reports/*.*
@@ -40,3 +43,6 @@ tests/playwright/.cache/
 !**/tests/**/dev/
 !.unlighthouse/_*.txt
 
+# lock files
+yarn.lock
+package-lock.json

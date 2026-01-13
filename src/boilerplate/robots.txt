@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+#TODO: sitemap link and rules
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+Allow: 
+Sitemap: https://boilerplate.plasttic.dev/sitemap.xml

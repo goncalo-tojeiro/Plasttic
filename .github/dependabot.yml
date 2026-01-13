@@ -1,35 +1,15 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  # Maintain dependencies for npm
-  - package-ecosystem: 'npm'
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: '/'
-    open-pull-requests-limit: 25
-    schedule:
-      # Check for npm updates on Sundays
-      interval: 'weekly'
-      timezone: 'Europe/Lisbon'
-      day: 'sunday'
-      time: '21:00'
-    # Raise pull requests for version updates
-    # against the `develop` branch
-    target-branch: 'develop'
-    # Specify labels for npm pull requests
-    labels:
-      - 'dependencies'
-    versioning-strategy: increase
-
   # Maintain dependencies for GitHub Actions
-  - package-ecosystem: 'github-actions' # See documentation for possible values
+  - package-ecosystem: 'github-actions'
     directory: '/' # Location of package manifests
-    open-pull-requests-limit: 25
+    target-branch: 'main'
     schedule:
       interval: 'weekly'
       timezone: 'Europe/Lisbon'
       day: 'sunday'
       time: '23:00'
+    labels: 
+      - 'main' 
+      - 'actions' 
+      - 'dependabot'

@@ -17,8 +17,12 @@
   /* Focus style color: Brand Primary Color 300 - CUSTOMIZED */
   --ptt-reset-focus-color: var(--ptt-clr-primary-300);
 
-  /* Top padding when using links to scrolling down */
+  /* Top padding when using anchor links to scroll down */
   --ptt-reset-scroll-padding: 2em;
+
+  /* Lists padding to align with content */
+  --ptt-reset-list-pad-ul: 1.75ex;
+  --ptt-reset-list-pad-ol: 2.35ex; /* Optimized for single digits*/
 
   /* Better text readability */
   /* This properties best values depend on the font used */

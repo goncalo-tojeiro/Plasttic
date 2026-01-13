@@ -6,9 +6,13 @@ on:
   push:
     branches:
       - 'develop'
+      - '!renovate/**'
+      - '!dependabot/**'
   pull_request: # pull_request/push/
     branches:
       - '**'
+      - '!renovate/**'
+      - '!dependabot/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,16 +33,21 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ !contains(github.head_ref, 'renovate/') && !contains(github.head_ref, 'dependabot/') }}
+
     steps:
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+
       # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Provides functionality for GitHub Actions
       - name: ci
         uses: pnpm/action-setup@v4
         with:
-          version: 8.x
+          version: 10.17.1
 
       # Installs dependencies
       - run: pnpm install
@@ -48,13 +57,3 @@ jobs:
       - run: pnpm test:jest:ci
       - run: pnpm test:play:ci
       - run: pnpm package:commit
-
-      # # Commit changes
-      # - name: commit
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: '[PlastticBot] CI'
-      #     # Optional commit user and author settings
-      #     commit_user_name: Goncalo Tojeiro # defaults to "Plasttic[bot]"
-      #     commit_user_email: dev@tojeiro.me # defaults to "41898282+github-actions[bot]@users.noreply.github.com"
-      #     commit_author: Goncalo Tojeiro <dev@tojeiro.me> # defaults to author of the commit that triggered the run

@@ -25,7 +25,6 @@
     "tomoki1207.pdf",
     "stylelint.vscode-stylelint",
     "ritwickdey.liveserver",
-    "ms-vscode.vscode-typescript-next",
     "oderwat.indent-rainbow",
     "kisstkondoros.vscode-gutter-preview",
     "pomber.git-file-history",
@@ -35,7 +34,8 @@
     "aaron-bond.better-comments",
     "phoenisx.cssvar",
     "ionutvmi.path-autocomplete",
-    "zignd.html-css-class-completion"
+    "zignd.html-css-class-completion",
+    "mylesmurphy.prettify-ts"
   ],
   "unwantedRecommendations": []
 }
