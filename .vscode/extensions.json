@@ -35,7 +35,8 @@
     "phoenisx.cssvar",
     "ionutvmi.path-autocomplete",
     "zignd.html-css-class-completion",
-    "mylesmurphy.prettify-ts"
+    "mylesmurphy.prettify-ts",
+    "deque-systems.vscode-axe-linter"
   ],
   "unwantedRecommendations": []
 }
