@@ -45,7 +45,7 @@ jobs:
 
       # Provides functionality for GitHub Actions
       - name: ci
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 10.17.1
 
