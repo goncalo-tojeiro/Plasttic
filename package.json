@@ -100,7 +100,7 @@
     "@rushstack/eslint-patch": "^1.13.0",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.18.8",
+    "@types/node": "^24.13.3",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
     "@typescript-eslint/typescript-estree": "^8.46.0",
