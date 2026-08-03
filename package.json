@@ -90,8 +90,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
-    "@babel/eslint-parser": "^7.28.4",
-    "@babel/types": "^7.28.4",
+    "@babel/eslint-parser": "^8.0.1",
+    "@babel/types": "^8.0.4",
     "@builder.io/partytown": "^0.10.3",
     "@csstools/postcss-global-data": "^3.1.0",
     "@csstools/postcss-progressive-custom-properties": "^4.2.1",
