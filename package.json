@@ -160,7 +160,7 @@
     "stylelint-order": "^7.0.0",
     "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
-    "typescript": "5.9.2",
+    "typescript": "7.0.2",
     "uglify-js": "^3.19.3"
   },
   "devDependencies": {
