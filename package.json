@@ -155,7 +155,7 @@
     "rehype-minify-whitespace": "^6.0.2",
     "rehype-remove-comments": "^6.1.1",
     "socket.io": "^4.8.1",
-    "stylelint": "^16.25.0",
+    "stylelint": "^17.14.1",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-order": "^7.0.0",
     "ts-jest": "^29.4.4",
