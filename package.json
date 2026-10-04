@@ -133,7 +133,7 @@
     "onchange": "^7.1.0",
     "plasttic-reset": "^2.1.0",
     "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
+    "postcss-cli": "^12.0.0",
     "postcss-custom-media": "^11.0.6",
     "postcss-custom-properties": "^14.0.6",
     "postcss-discard-empty": "^7.0.1",
